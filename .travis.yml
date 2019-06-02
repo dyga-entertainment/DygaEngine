@@ -1,0 +1,23 @@
+language: java
+jdk: oraclejdk8
+sudo: false
+
+services:
+- docker
+cache:
+  directories:
+  - "$HOME/.cache"
+
+deploy:
+  provider: script
+  script: "cp .travis.settings.xml $HOME/.m2/settings.xml && mvn deploy"
+  skip_cleanup: true
+  on:
+    tags: true
+
+notifications:
+  email:
+    recipients:
+    - boiron.gregoire@gmail.com
+    on_success: change
+    on_failure: always

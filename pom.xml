@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.dyga.entertainment</groupId>
+    <artifactId>dyga-engine</artifactId>
+    <version>1.1-SNAPSHOT</version>
+    <name>Java 2D Game</name>
+    <url>http://todo.com</url>
+    <description>Made a basic game engine in 2D with Swing library.</description>
+
+    <!-- See https://maven.apache.org/pom.html#Properties -->
+    <properties>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!-- See https://maven.apache.org/pom.html#Dependencies -->
+    <dependencies>
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+    </dependencies>
+
+    <!-- See https://maven.apache.org/pom.html#Build_Settings -->
+    <build>
+        <defaultGoal>install</defaultGoal>
+        <directory>${basedir}/target</directory>
+        <finalName>${project.artifactId}-${project.version}</finalName>
+        <!-- Don't need to specify since we follow the architecture
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>false</filtering>
+            </resource>
+        </resources>-->
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.0</version>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+
+        <!--
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.0</version>
+                <configuration>-->
+                    <!-- Set the goal prefix for the plugin that is specified in the descriptor -->
+        <!--<goalPrefix>plugin</goalPrefix> -->
+        <!-- Specifies the target location of the generated plugin descriptor. --><!--
+                    <outputDirectory>target/dir</outputDirectory>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+        -->
+    </build>
+
+    <!-- To deploy remote repository -->
+    <!--
+    <distributionManagement>
+        <repository>
+            <id>mycompany-repository</id>
+            <name>MyCompany Repository</name>
+            <url>scp://repository.mycompany.com/repository/maven2</url>
+        </repository>
+    </distributionManagement>-->
+</project>
