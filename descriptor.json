@@ -12,7 +12,7 @@
     "licenses": ["GNU General Public License v3.0"],
     "labels": ["game-engine", "2D-engine", "video-game"],
     "public_download_numbers": false,
-    "public_stats": false,
+    "public_stats": false
   },
 
   "version": {
@@ -25,7 +25,11 @@
 
   "files":
   [
-    {"includePattern": "target/(.*)", "excludePattern": "target/.*.zip$", "uploadPattern": "/$1"}
+    {
+      "includePattern": "target/(.*)",
+      "excludePattern": "target/.*.zip$",
+      "uploadPattern": "/$1"
+    }
   ],
   "publish": true
 }
