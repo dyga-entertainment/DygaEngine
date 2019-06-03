@@ -12,7 +12,7 @@ deploy:
   provider: bintray
   file: "descriptor.json"
   user: "graygzou"
-  key: BINTRAY_API_KEY
+  key: $BINTRAY_API_KEY
   skip_cleanup: true # to upload artifacts created during the build
 
 notifications:
