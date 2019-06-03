@@ -9,11 +9,11 @@ cache:
   - "$HOME/.cache"
 
 deploy:
-  provider: script
-  script: "cp .travis.settings.xml $HOME/.m2/settings.xml && mvn deploy"
-  skip_cleanup: true
-  on:
-    tags: true
+  provider: bintray
+  file: "descriptor.json"
+  user: "graygzou"
+  key: $(BINTRAY_API_KEY)
+  skip_cleanup: true # to upload artifacts created during the build
 
 notifications:
   email:
