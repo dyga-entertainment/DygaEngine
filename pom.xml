@@ -11,6 +11,19 @@
     <url>http://todo.com</url>
     <description>Made a basic game engine in 2D with Swing library.</description>
 
+    <distributionManagement>
+        <repository>
+            <id>bintray-dyga-entertainment-DygaEngine</id>
+            <name>dyga-entertainment-DygaEngine</name>
+            <url>https://api.bintray.com/maven/dyga-entertainment/DygaEngine/dyga-engine/;publish=1</url>
+        </repository>
+        <snapshotRepository>
+            <id>bintray-dyga-entertainment-DygaEngine</id>
+            <name>dyga-entertainment-DygaEngine</name>
+            <url>https://api.bintray.com/maven/dyga-entertainment/DygaEngine/dyga-engine/;publish=1</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <!-- See https://maven.apache.org/pom.html#Properties -->
     <properties>
         <maven.compiler.source>1.7</maven.compiler.source>
