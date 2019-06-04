@@ -9,7 +9,7 @@ cache:
   - "$HOME/.cache"
 
 deploy:
-  - provider: bintray
+  provider: bintray
   file: "bintray.json"
   user: "graygzou"
   key: $BINTRAY_API_KEY
