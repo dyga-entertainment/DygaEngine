@@ -25,8 +25,8 @@
 
   "files":
   [
-    {"includePattern": "pom.xml", "uploadPattern": "com/dyga/Engine/${project.version}/dyga-engine-${project.version}.pom"},
-    {"includePattern": "target/(.*\.jar)", "uploadPattern": "com/dyga/Engine/${project.version}/$1"}
+    {"includePattern": "pom.xml", "excludePattern": "target/^(.*\.jar)", "uploadPattern": "com/dyga/Engine/${project.version}/dyga-engine-${project.version}.pom"},
+    {"includePattern": "target/(.*\.jar)", "excludePattern": "target/^(.*\.jar)", "uploadPattern": "com/dyga/Engine/${project.version}/$1"}
   ],
   "publish": true
 }
