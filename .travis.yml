@@ -13,7 +13,7 @@ deploy:
   file: target/bintray.json
   user: graygzou
   key: $BINTRAY_API_KEY
-  skip_cleanup: true # to upload artifacts created during the build
+  #skip_cleanup: true # to upload artifacts created during the build
   on:
     repo: dyga-entertainment/DygaEngine # Trigger build if build occurs in this branch
   # tags: true  # Only if $TRAVIS_TAG is set

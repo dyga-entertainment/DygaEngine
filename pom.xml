@@ -57,7 +57,7 @@
                     <outputDirectory>${basedir}/target</outputDirectory>
                     <resources>
                         <resource>
-                            <directory>${basedir}</directory>
+                            <directory>${basedir}</directory>dd
                             <include>bintray.json</include>
                             <filtering>true</filtering>
                         </resource>
