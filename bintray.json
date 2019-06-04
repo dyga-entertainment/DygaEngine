@@ -25,11 +25,8 @@
 
   "files":
   [
-    {
-      "includePattern": "target/(.*)",
-      "excludePattern": "target/.*.zip$",
-      "uploadPattern": "/$1"
-    }
+    {"includePattern": "pom.xml", "uploadPattern": "com/github/graygzou/dyga-engine/${project.version}/dyga-engine-${project.version}.pom"},
+    {"includePattern": "target/(.*\.jar)", "uploadPattern": "com/github/graygzou/dyga-engine/${project.version}/$1"}
   ],
   "publish": true
 }
