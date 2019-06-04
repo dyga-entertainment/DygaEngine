@@ -6,7 +6,7 @@
 
     <groupId>com.dyga.entertainment</groupId>
     <artifactId>dyga-engine</artifactId>
-    <version>0.1</version>
+    <version>0.2</version>
     <name>Java 2D Game</name>
     <url>http://todo.com</url>
     <description>Made a basic game engine in 2D with Swing library.</description>
