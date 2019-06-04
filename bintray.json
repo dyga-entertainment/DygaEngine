@@ -16,17 +16,17 @@
   },
 
   "version": {
-    "name": "0.1",
+    "name": "${project.version}",
     "desc": "Early version of the engine to test bintray upload.",
     "released": "2019-06-02",
-    "vcs_tag": "0.1",
+    "vcs_tag": "${project.version}",
     "gpgSign": false
   },
 
   "files":
   [
-    {"includePattern": "pom.xml", "uploadPattern": "com/github/graygzou/dyga-engine/${project.version}/dyga-engine-${project.version}.pom"},
-    {"includePattern": "target/(.*\.jar)", "uploadPattern": "com/github/graygzou/dyga-engine/${project.version}/$1"}
+    {"includePattern": "pom.xml", "uploadPattern": "com/dyga/Engine/${project.version}/dyga-engine-${project.version}.pom"},
+    {"includePattern": "target/(.*\.jar)", "uploadPattern": "com/dyga/Engine/${project.version}/$1"}
   ],
   "publish": true
 }

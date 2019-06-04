@@ -9,11 +9,26 @@ cache:
   - "$HOME/.cache"
 
 deploy:
-  provider: bintray
+  - provider: bintray
   file: "bintray.json"
   user: "graygzou"
   key: $BINTRAY_API_KEY
   skip_cleanup: true # to upload artifacts created during the build
+  on:
+    repo: dyga-entertainment/DygaEngine # Trigger build if build occurs in this branch
+  # tags: true  # Only if $TRAVIS_TAG is set
+
+  # TODO LATER
+  # Automatic create release on github repo
+  #- provider: releases
+  #  skip_cleanup: true
+  #  api_key: $GITHUB_OAUTH_API_KEY
+  #  file_glob: true
+  #  file:
+  #    - "target/*.jar"
+  #  on:
+  #    repo: dyga-entertainment/DygaEngine
+  #    tags: true
 
 notifications:
   email:
