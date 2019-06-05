@@ -5,8 +5,9 @@ sudo: false
 # Skipping installation phase
 install: true
 
-services:
-- docker
+#services:
+#- docker
+
 cache:
   directories:
   - "$HOME/.cache"
