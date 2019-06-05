@@ -2,6 +2,9 @@ language: java
 jdk: oraclejdk8
 sudo: false
 
+# Skipping installation phase
+install: true
+
 services:
 - docker
 cache:
@@ -16,7 +19,7 @@ deploy:
   skip_cleanup: true # to upload artifacts created during the build
   on:
     repo: dyga-entertainment/DygaEngine # Trigger build if build occurs in this branch
-  # tags: true  # Only if $TRAVIS_TAG is set
+    tags: true  # Only if $TRAVIS_TAG is set
 
   # TODO LATER
   # Automatic create release on github repo
