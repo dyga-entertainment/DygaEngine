@@ -5,7 +5,7 @@
     "subject": "dyga-entertainment",
     "desc": "2D game engine core which allows to build platformer and puzzle games.",
     "website_url": "${project.url}",
-    "issue_tracker_url": "${project.url}/issuess",
+    "issue_tracker_url": "${project.url}/issues",
     "vcs_url": "${project.url}",
     "github_use_tag_release_notes": true,
     "github_release_notes_file": "RELEASE.txt",
@@ -25,9 +25,9 @@
 
   "files":
   [
-    {"includePattern": "pom.xml", "uploadPattern": "com/dyga/Engine/dyga-engine/${project.version}/dyga-engine-${project.version}.pom"},
-    {"includePattern": "dyga-core/target/(.*\.jar)", "uploadPattern": "com/dyga/Engine/dyga-core/${project.version}/$1"},
-    {"includePattern": "dyga-core/pom.xml", "uploadPattern": "com/dyga/Engine/dyga-core/${project.version}/dyga-core-${project.version}.pom"}
+    {"includePattern": "pom.xml", "uploadPattern": "com/dyga-entertainment/dyga-engine/dyga-engine/${project.version}/dyga-engine-${project.version}.pom"},
+    {"includePattern": "dyga-core/target/(.*\.jar)", "uploadPattern": "com/dyga-entertainment/dyga-engine/dyga-core/${project.version}/$1"},
+    {"includePattern": "dyga-core/pom.xml", "uploadPattern": "com/dyga-entertainment/dyga-engine/dyga-core/${project.version}/dyga-core-${project.version}.pom"}
   ],
   "publish": true
 }

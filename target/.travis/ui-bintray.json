@@ -18,16 +18,16 @@
   "version": {
     "name": "0.2",
     "desc": "Early version of the engine to test bintray upload.",
-    "released": "2019-06-06T01:14:41Z",
+    "released": "2019-06-06T01:51:09Z",
     "vcs_tag": "0.2",
     "gpgSign": false
   },
 
   "files":
   [
-    {"includePattern": "pom.xml", "uploadPattern": "com/dyga/Engine/dyga-engine/0.2/dyga-engine-0.2.pom"},
-    {"includePattern": "dyga-ui/target/(.*\.jar)", "uploadPattern": "com/dyga/Engine/dyga-ui/0.2/$1"},
-    {"includePattern": "dyga-ui/pom.xml", "uploadPattern": "com/dyga/Engine/dyga-ui/0.2/dyga-ui-0.2.pom"}
+    {"includePattern": "pom.xml", "uploadPattern": "com/dyga-entertainment/dyga-engine/dyga-engine/0.2/dyga-engine-0.2.pom"},
+    {"includePattern": "dyga-ui/target/(.*\.jar)", "uploadPattern": "com/dyga-entertainment/dyga-engine/dyga-ui/0.2/$1"},
+    {"includePattern": "dyga-ui/pom.xml", "uploadPattern": "com/dyga-entertainment/dyga-engine/dyga-ui/0.2/dyga-ui-0.2.pom"}
   ],
   "publish": true
 }

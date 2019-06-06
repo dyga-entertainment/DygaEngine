@@ -12,7 +12,7 @@
         <module>dyga-core</module>
     </modules>
 
-    <groupId>com.dyga.entertainment</groupId>
+    <groupId>com.dyga-entertainment.dyga-engine</groupId>
     <artifactId>dyga-engine</artifactId>
     <version>0.2</version>
     <packaging>pom</packaging>
