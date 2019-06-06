@@ -69,7 +69,12 @@
                     <resources>
                         <resource>
                             <directory>${basedir}</directory>
-                            <include>bintray.json</include>
+                            <include>.travis/core-bintray.json</include>
+                            <filtering>true</filtering>
+                        </resource>
+                        <resource>
+                            <directory>${basedir}</directory>
+                            <include>.travis/ui-bintray.json</include>
                             <filtering>true</filtering>
                         </resource>
                     </resources>

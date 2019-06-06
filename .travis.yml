@@ -13,8 +13,17 @@ cache:
   - "$HOME/.cache"
 
 deploy:
-  provider: bintray
-  file: target/bintray.json
+- provider: bintray
+  file: target/.travis/core-bintray.json
+  user: graygzou
+  key: $BINTRAY_API_KEY
+  skip_cleanup: true # to upload artifacts created during the build
+  on:
+    repo: dyga-entertainment/DygaEngine # Trigger build if build occurs in this branch
+    tags: false  # Only if $TRAVIS_TAG is not set
+
+- provider: bintray
+  file: target/.travis/ui-core-bintray.json
   user: graygzou
   key: $BINTRAY_API_KEY
   skip_cleanup: true # to upload artifacts created during the build

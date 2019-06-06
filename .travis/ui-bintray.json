@@ -1,9 +1,9 @@
 {
   "package": {
-    "name": "dyga-engine",
-    "repo": "DygaEngine",
+    "name": "com.dyga.engine-ui",
+    "repo": "dyga-engine",
     "subject": "dyga-entertainment",
-    "desc": "2D game engine which allows to build platformer and puzzle games. ",
+    "desc": "2D game engine ui which allows to build platformer and puzzle games.",
     "website_url": "${project.url}",
     "issue_tracker_url": "https://github.com/dyga-entertainment/DygaEngine/issues",
     "vcs_url": "https://github.com/dyga-entertainment/DygaEngine",
@@ -26,8 +26,6 @@
   "files":
   [
     {"includePattern": "pom.xml", "uploadPattern": "com/dyga/Engine/dyga-engine/${project.version}/dyga-engine-${project.version}.pom"},
-    {"includePattern": "dyga-core/target/(.*\.jar)", "uploadPattern": "com/dyga/Engine/dyga-core/${project.version}/$1"},
-    {"includePattern": "dyga-core/pom.xml", "uploadPattern": "com/dyga/Engine/dyga-core/${project.version}/dyga-core-${project.version}.pom"},
     {"includePattern": "dyga-ui/target/(.*\.jar)", "uploadPattern": "com/dyga/Engine/dyga-ui/${project.version}/$1"},
     {"includePattern": "dyga-ui/pom.xml", "uploadPattern": "com/dyga/Engine/dyga-ui/${project.version}/dyga-ui-${project.version}.pom"}
   ],

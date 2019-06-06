@@ -1,9 +1,9 @@
 {
   "package": {
-    "name": "dyga-engine",
-    "repo": "DygaEngine",
+    "name": "com.dyga.engine-ui",
+    "repo": "dyga-engine",
     "subject": "dyga-entertainment",
-    "desc": "2D game engine which allows to build platformer and puzzle games. ",
+    "desc": "2D game engine ui which allows to build platformer and puzzle games.",
     "website_url": "https://github.com/dyga-entertainment/DygaEngine",
     "issue_tracker_url": "https://github.com/dyga-entertainment/DygaEngine/issues",
     "vcs_url": "https://github.com/dyga-entertainment/DygaEngine",
@@ -18,7 +18,7 @@
   "version": {
     "name": "0.2",
     "desc": "Early version of the engine to test bintray upload.",
-    "released": "2019-06-05T02:14:56Z",
+    "released": "2019-06-06T00:53:49Z",
     "vcs_tag": "0.2",
     "gpgSign": false
   },
@@ -26,10 +26,8 @@
   "files":
   [
     {"includePattern": "pom.xml", "uploadPattern": "com/dyga/Engine/dyga-engine/0.2/dyga-engine-0.2.pom"},
-    {"includePattern": "dyga-core/target/(.*\.jar)", "uploadPattern": "com/dyga/Engine/dyga-core/0.2/$1"},
-    {"includePattern": "dyga-core/pom.xml", "uploadPattern": "com/dyga/Engine/dyga-core/0.2/dyga-core-0.2.pom"},
-    {"includePattern": "dyga-spring/target/(.*\.jar)", "uploadPattern": "com/dyga/Engine/dyga-ui/0.2/$1"},
-    {"includePattern": "dyga-spring/pom.xml", "uploadPattern": "com/dyga/Engine/dyga-ui/0.2/dyga-ui-0.2.pom"}
+    {"includePattern": "dyga-ui/target/(.*\.jar)", "uploadPattern": "com/dyga/Engine/dyga-ui/0.2/$1"},
+    {"includePattern": "dyga-ui/pom.xml", "uploadPattern": "com/dyga/Engine/dyga-ui/0.2/dyga-ui-0.2.pom"}
   ],
   "publish": true
 }
