@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1965d4b1-93b3-42f9-ba48-2fa129f30f22" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.travis/core-bintray.json" beforeDir="false" afterPath="$PROJECT_DIR$/.travis/core-bintray.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.travis/ui-bintray.json" beforeDir="false" afterPath="$PROJECT_DIR$/.travis/ui-bintray.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/dyga-core.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-engine.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-ui/dyga-ui.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-ui/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-ui/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-ui/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-ui/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-ui/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-ui/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/.travis/core-bintray.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/.travis/core-bintray.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/.travis/ui-bintray.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/.travis/ui-bintray.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -59,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.travis/ui-bintray.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="28" column="104" selection-start-line="28" selection-start-column="104" selection-end-line="28" selection-end-column="104" />
+            <state relative-caret-position="240">
+              <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -80,7 +68,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dyga-ui/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
@@ -92,8 +80,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.travis/core-bintray.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="27" column="99" selection-start-line="27" selection-start-column="99" selection-end-line="27" selection-end-column="99" />
+            <state relative-caret-position="240">
+              <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -117,11 +105,11 @@
         <option value="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/View/Menu/Component/ViewButton.java" />
         <option value="$PROJECT_DIR$/bintray.json" />
         <option value="$PROJECT_DIR$/.travis.yml" />
-        <option value="$PROJECT_DIR$/.travis/ui-bintray.json" />
-        <option value="$PROJECT_DIR$/.travis/core-bintray.json" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/dyga-core/pom.xml" />
         <option value="$PROJECT_DIR$/dyga-ui/pom.xml" />
+        <option value="$PROJECT_DIR$/.travis/core-bintray.json" />
+        <option value="$PROJECT_DIR$/.travis/ui-bintray.json" />
       </list>
     </option>
   </component>
@@ -175,16 +163,6 @@
               <item name="dyga-engine" type="b2602c69:ProjectViewProjectNode" />
               <item name="dyga-engine" type="462c0819:PsiDirectoryNode" />
               <item name=".travis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dyga-engine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dyga-engine" type="462c0819:PsiDirectoryNode" />
-              <item name="dyga-core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dyga-engine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dyga-engine" type="462c0819:PsiDirectoryNode" />
-              <item name="dyga-ui" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -319,12 +297,12 @@
       <workItem from="1559689680326" duration="114000" />
       <workItem from="1559689813224" duration="7017000" />
       <workItem from="1559781574205" duration="2110000" />
-      <workItem from="1559784196811" duration="1663000" />
+      <workItem from="1559784196811" duration="2138000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40177000" />
+    <option name="totallyTimeSpent" value="40652000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -484,20 +462,6 @@
     <entry file="file://$PROJECT_DIR$/target/.travis/core-bintray.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.travis/core-bintray.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="27" column="99" selection-start-line="27" selection-start-column="99" selection-end-line="27" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.travis/ui-bintray.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="28" column="104" selection-start-line="28" selection-start-column="104" selection-end-line="28" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -516,6 +480,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis/core-bintray.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis/ui-bintray.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
         </state>
       </provider>
     </entry>

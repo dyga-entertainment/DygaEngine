@@ -25,7 +25,6 @@
 
   "files":
   [
-    {"includePattern": "pom.xml", "uploadPattern": "com/dyga-entertainment/dyga-engine/dyga-engine/${project.version}/dyga-engine-${project.version}.pom"},
     {"includePattern": "dyga-core/target/(.*\.jar)", "uploadPattern": "com/dyga-entertainment/dyga-engine/dyga-core/${project.version}/$1"},
     {"includePattern": "dyga-core/pom.xml", "uploadPattern": "com/dyga-entertainment/dyga-engine/dyga-core/${project.version}/dyga-core-${project.version}.pom"}
   ],
