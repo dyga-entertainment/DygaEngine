@@ -1,0 +1,334 @@
+{
+  "name": "LevelSelectionView",
+  "view": {
+    "type": "Panel",
+    "background": {
+      "imageUrl": "",
+      "startingCoordinate": {
+        "x": 0,
+        "y": 0
+      },
+      "displayOptions": "Single"
+    },
+    "options": [
+      {"isOpaque": true},
+      {
+        "layout": {
+          "name": "BorderLayout"
+        }
+      }
+    ],
+    "components": [
+      {
+        "type": "Panel",
+        "options": [
+          {"isOpaque": false}
+        ],
+        "borderLayoutConstraints": "NORTH",
+        "components": [
+          {
+            "type": "Label",
+            "font": {
+              "name": "Dialog",
+              "size": 22,
+              "style": "Plain",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            "options": [
+              {"text": "Veuillez selectionner votre niveau"},
+              {
+                "border": {
+                  "thickness": 10,
+                  "color": "Black"
+                }
+              },
+              {"color" : "Black"},
+              {"isEnable": true},
+              {"PreferredSize": {
+                "width": 150,
+                "height": 50
+              }}
+            ]
+          }
+        ]
+      },
+      {
+        "type": "Panel",
+        "options": [
+          {"isOpaque": false},
+          {
+            "layout": {
+              "name": "BorderLayout"
+            }
+          }
+        ],
+        "borderLayoutConstraints": "CENTER",
+        "components": [
+          {
+            "type": "Panel",
+            "options": [
+              {"isOpaque": false},
+              {
+                "layout": {
+                  "name": "CardLayout"
+                }
+              }
+            ],
+            "borderLayoutConstraints": "CENTER",
+            "components": [
+              {
+                "type": "Panel",
+                "background": {
+                  "imageUrl": "Sprites/UI/Icons/avatar_greg.png",
+                  "startingCoordinate": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "displayOptions": "Single"
+                },
+                "options": [
+                  {
+                    "isOpaque": true
+                  }
+                ],
+                "components": []
+              },
+              {
+                "type": "Panel",
+                "background": {
+                  "imageUrl": "Sprites/UI/Icons/avatar_damien.png",
+                  "startingCoordinate": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "displayOptions": "Single"
+                },
+                "options": [
+                  {
+                    "isOpaque": true
+                  }
+                ],
+                "components": []
+              },
+              {
+                "type": "Panel",
+                "background": {
+                  "imageUrl": "Sprites/UI/Icons/avatar_axel.png",
+                  "startingCoordinate": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "displayOptions": "Single"
+                },
+                "options": [
+                  {
+                    "isOpaque": true
+                  }
+                ],
+                "components": []
+              },
+              {
+                "type": "Panel",
+                "background": {
+                  "imageUrl": "Sprites/UI/Icons/avatar_yann.png",
+                  "startingCoordinate": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "displayOptions": "Single"
+                },
+                "options": [
+                  {
+                    "isOpaque": true
+                  }
+                ],
+                "components": []
+              }
+            ]
+          },
+          {
+            "type": "Panel",
+            "options": [
+              {"isOpaque": false},
+              {
+                "layout": {
+                  "name": "WrapLayout"
+                }
+              }
+            ],
+            "borderLayoutConstraints": "SOUTH",
+            "components": [
+              {
+                "type": "Button",
+                "background": {
+                  "imageUrl": "Sprites/UI/Buttons/bouton_vide.png",
+                  "startingCoordinate": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "displayOptions": "Scale"
+                },
+                "listeners": [
+                  {
+                    "name": "mouse",
+                    "methods": [
+                      {
+                        "name": "onPressed",
+                        "functionName": "Inputs.ButtonsCallback.previousLevel",
+                        "imageUrl": "Sprites/UI/Buttons/bouton_vide.png",
+                        "songUrl": "todo.wav"
+                      }
+                    ]
+                  }
+                ],
+                "options": [
+                  {"text": "PreviousLevel"},
+                  {"isEnable": true},
+                  {"PreferredSize": {
+                    "width": 150,
+                    "height": 50
+                  }}
+                ]
+              },
+              {
+                "type": "Button",
+                "background": {
+                  "imageUrl": "Sprites/UI/Buttons/bouton_vide.png",
+                  "startingCoordinate": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "displayOptions": "Scale"
+                },
+                "listeners": [
+                  {
+                    "name": "mouse",
+                    "methods": [
+                      {
+                        "name": "onPressed",
+                        "functionName": "Inputs.ButtonsCallback.nextLevel",
+                        "imageUrl": "Sprites/UI/Buttons/bouton_vide.png",
+                        "songUrl": "todo.wav"
+                      }
+                    ]
+                  }
+                ],
+                "options": [
+                  {"text": "NextLevel"},
+                  {"isEnable": true},
+                  {"PreferredSize": {
+                    "width": 150,
+                    "height": 50
+                  }},
+                  {"nextView": "GameView"}
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "Panel",
+        "background": {
+          "imageUrl": "Sprites/UI/bandeau_menu.png",
+          "startingCoordinate": {
+            "x": 0,
+            "y": 0
+          },
+          "PreferredSize": {
+            "width": 400,
+            "height": 250
+          },
+          "displayOptions": "Tiled"
+        },
+        "options": [
+          {"isOpaque": false},
+          {
+            "layout": {
+              "name": "BorderLayout"
+            }
+          }
+        ],
+        "borderLayoutConstraints": "SOUTH",
+        "components": [
+          {
+            "type": "Button",
+            "background": {
+              "imageUrl": "Sprites/UI/Buttons/bouton_retour1.png",
+              "displayOptions": "Tiled",
+              "startingCoordinate": {
+                "x": 0,
+                "y": 0
+              },
+              "PreferredSize": {
+                "width": 400,
+                "height": 250
+              },
+              "displayOptions": "Scale"
+            },
+            "listeners": [
+              {
+                "name": "mouse",
+                "methods": [
+                  {
+                    "name": "onPressed",
+                    "functionName": "Inputs.ButtonsCallback.back",
+                    "imageUrl": "Sprites/UI/Buttons/bouton_retour2.png",
+                    "songUrl": "todo.wav"
+                  }
+                ]
+              }
+            ],
+            "options": [
+              {"text": "Back"},
+              {"isEnable": true},
+              {"PreferredSize": {
+                "width": 150,
+                "height": 50
+              }}
+            ],
+            "borderLayoutConstraints": "WEST"
+          },
+          {
+            "type": "Button",
+            "background": {
+              "imageUrl": "Sprites/UI/Buttons/bouton_valider1.png",
+              "startingCoordinate": {
+                "x": 0,
+                "y": 0
+              },
+              "displayOptions": "Scale"
+            },
+            "listeners": [
+              {
+                "name": "mouse",
+                "methods": [
+                  {
+                    "name": "onPressed",
+                    "functionName": "Inputs.ButtonsCallback.launchGame",
+                    "imageUrl": "Sprites/UI/Buttons/bouton_valider2.png",
+                    "songUrl": "todo.wav"
+                  }
+                ]
+              }
+            ],
+            "options": [
+              {"text": "Accept"},
+              {"isEnable": true},
+              {"PreferredSize": {
+                "width": 150,
+                "height": 50
+              }},
+              {"nextView": "GameView"}
+            ],
+            "borderLayoutConstraints": "EAST"
+          }
+        ]
+      }
+    ]
+  }
+}

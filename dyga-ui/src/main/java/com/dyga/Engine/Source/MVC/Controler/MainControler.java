@@ -112,8 +112,9 @@ public class MainControler implements KeyListener, MouseListener, ActionListener
 			}
 		}
 
+		// TODO REVIEW THAT
 		// Notify the view that it needs to repaint.
-		this.mainView.paint();
+		this.mainView.paint(0,0);
 
 
 		// OLD VERSION
@@ -162,8 +163,9 @@ public class MainControler implements KeyListener, MouseListener, ActionListener
 		// Update the model
 		this.mainModel.updateView(nextView);
 
+		// TODO REVIEW THAT
 		// Notify the view
-		this.mainView.paint();
+		this.mainView.paint(0, 0);
 	}
 
 	public void returnLastView() {
@@ -172,8 +174,9 @@ public class MainControler implements KeyListener, MouseListener, ActionListener
 		// Update the model
 		this.mainModel.returnLastView();
 
+		// TODO REVIEW THAT
 		// Notify the view
-		this.mainView.paint();
+		this.mainView.paint(0,0);
 	}
 
 

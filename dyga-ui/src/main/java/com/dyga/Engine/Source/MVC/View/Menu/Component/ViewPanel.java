@@ -15,14 +15,22 @@ public class ViewPanel extends JLayeredPane {
     private EntityView entity;
     // END TEST
 
+    public ViewPanel() {
+        this("");
+    }
+
     public ViewPanel(String urlImage) {
         super();
         this.background = new Background();
         this.background.startingCoordinate = null;
         this.background.preferredSize = null;
 
+        this.setBackgroundImage(urlImage);
+    }
+
+    public void setBackgroundImage(String urlImage) {
         BufferedImage image;
-        if((image = Images.getImageFromPath(urlImage)) != null) {
+        if(!urlImage.isEmpty() && (image = Images.getImageFromPath(urlImage)) != null) {
             this.background.backgroundImage = image;
         }
     }

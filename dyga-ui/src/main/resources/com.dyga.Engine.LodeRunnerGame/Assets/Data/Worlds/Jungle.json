@@ -1,0 +1,15 @@
+{
+  "name": "Jungle",
+  "background": {
+    "imageUrl": "Sprites/UI/Backgrounds/background_jungle.png",
+    "startingCoordinate": {
+      "x": 0,
+      "y": 0
+    },
+    "displayOptions": "Single"
+  },
+  "music": {
+    "path": "Songs/song.wav",
+    "pitch": 1.0
+  }
+}

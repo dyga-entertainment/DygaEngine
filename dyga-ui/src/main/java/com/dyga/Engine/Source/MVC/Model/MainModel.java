@@ -2,8 +2,8 @@ package com.dyga.Engine.Source.MVC.Model;
 
 import com.dyga.Engine.Source.MVC.Model.Game.EntityModel;
 import com.dyga.Engine.Source.MVC.Model.Menu.ModelView;
-import com.dyga.Engine.Source.Utils.EntityLoader;
-import com.dyga.Engine.Source.Utils.MenuLoader;
+import com.dyga.Engine.Source.Utils.JsonLoaders.EntityLoader;
+import com.dyga.Engine.Source.Utils.JsonLoaders.MenuLoader;
 import java.util.*;
 
 /**

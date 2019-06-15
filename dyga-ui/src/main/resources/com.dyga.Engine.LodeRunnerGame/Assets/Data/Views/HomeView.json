@@ -1,0 +1,253 @@
+{
+  "name": "HomeView",
+  "view": {
+    "type": "Panel",
+    "background": {
+      "imageUrl": "Assets/Sprites/UI/Backgrounds/background_menu.png",
+      "startingCoordinate": {
+        "x": 0,
+        "y": 0
+      },
+      "displayOptions": "Single"
+    },
+    "options": [
+      {"isOpaque": true},
+      {
+        "layout": {
+          "name": "BorderLayout"
+        }
+      }
+    ],
+    "components": [
+      {
+        "type": "Panel",
+        "background": {
+          "imageUrl": "Assets/Sprites/UI/bandeau_menu.png",
+          "startingCoordinate": {
+            "x": 0,
+            "y": 0
+          },
+          "PreferredSize": {
+            "width": 400,
+            "height": 250
+          },
+          "displayOptions": "Tiled"
+        },
+        "options": [
+          {"isOpaque": false},
+          {
+            "layout": {
+              "name": "WrapLayout"
+            }
+          }
+        ],
+        "borderLayoutConstraints": "SOUTH",
+        "components": [
+          {
+            "type": "Button",
+            "background": {
+              "imageUrl": "Assets/Sprites/UI/Buttons/bouton_solo1.png",
+              "startingCoordinate": {
+                "x": 0,
+                "y": 0
+              },
+              "PreferredSize": {
+                "width": 400,
+                "height": 250
+              },
+              "displayOptions": "Tiled"
+            },
+            "listeners": [
+              {
+                "name": "mouse",
+                "methods": [
+                  {
+                    "name": "onPressed",
+                    "functionName": "Inputs.ButtonsCallback.changeView",
+                    "imageUrl": "Assets/Sprites/UI/Buttons/bouton_solo1.png",
+                    "songUrl": "todo.wav",
+                    "nextView": "WorldSelection"
+                  },
+                  {
+                    "name": "onPressed"
+                  },
+                  {
+                    "name": "onReleased"
+                  },
+                  {
+                    "name": "onEntered",
+                    "imageUrl": "Assets/Sprites/UI/Buttons/Selected/bouton_solo2.png"
+                  },
+                  {
+                    "name": "onExited"
+                  }
+                ]
+              }
+            ],
+            "options": [
+              {"text": "Solo"},
+              {"isEnable": true},
+              {"PreferredSize": {
+                "width": 150,
+                "height": 50
+              }},
+              {"nextView": "WorldSelectionView"}
+            ]
+          },
+          {
+            "type": "Button",
+            "background": {
+              "imageUrl": "Assets/Sprites/UI/Buttons/bouton_coop1.png",
+              "startingCoordinate": {
+                "x": 0,
+                "y": 0
+              },
+              "PreferredSize": {
+                "width": 400,
+                "height": 250
+              },
+              "displayOptions": "Tiled"
+            },
+            "listeners": [
+              {
+                "name": "mouse",
+                "methods": [
+                  {
+                    "name": "onPressed",
+                    "functionName": "Inputs.ButtonsCallback.changeView",
+                    "imageUrl": "Assets/Sprites/UI/Buttons/bouton_solo1.png",
+                    "songUrl": "todo.wav",
+                    "nextView": "WorldSelection"
+                  }
+                ]
+              }
+            ],
+            "options": [
+              {"text": "Coop"},
+              {"isEnable": false},
+              {"PreferredSize": {
+                "width": 150,
+                "height": 50
+              }},
+              {"nextView": "CoopView"}
+            ]
+          },
+          {
+            "type": "Button",
+            "background": {
+              "imageUrl": "Assets/Sprites/UI/Buttons/bouton_options1.png",
+              "startingCoordinate": {
+                "x": 0,
+                "y": 0
+              },
+              "PreferredSize": {
+                "width": 400,
+                "height": 250
+              },
+              "displayOptions": "Tiled"
+            },
+            "listeners": [
+              {
+                "name": "mouse",
+                "methods": [
+                  {
+                    "name": "onPressed",
+                    "functionName": "Inputs.ButtonsCallback.changeView",
+                    "imageUrl": "Assets/Sprites/UI/Buttons/bouton_solo1.png",
+                    "songUrl": "todo.wav",
+                    "nextView": "WorldSelection"
+                  }
+                ]
+              }
+            ],
+            "options": [
+              {"text": "Options"},
+              {"isEnable": false},
+              {"PreferredSize": {
+                "width": 150,
+                "height": 50
+              }},
+              {"nextView": "SettingsView"}
+            ]
+          },
+          {
+            "type": "Button",
+            "background": {
+              "imageUrl": "Assets/Sprites/UI/Buttons/bouton_editeur1.png",
+              "startingCoordinate": {
+                "x": 0,
+                "y": 0
+              },
+              "PreferredSize": {
+                "width": 400,
+                "height": 250
+              },
+              "displayOptions": "Tiled"
+            },
+            "listeners": [
+              {
+                "name": "mouse",
+                "methods": [
+                  {
+                    "name": "onPressed",
+                    "functionName": "Inputs.ButtonsCallback.changeView",
+                    "imageUrl": "Assets/Sprites/UI/Buttons/bouton_solo1.png",
+                    "songUrl": "todo.wav",
+                    "nextView": "WorldSelection"
+                  }
+                ]
+              }
+            ],
+            "options": [
+              {"text": "Editeur"},
+              {"isEnable": false},
+              {"PreferredSize": {
+                "width": 150,
+                "height": 50
+              }},
+              {"nextView": "Editeur"}
+            ]
+          },
+          {
+            "type": "Button",
+            "background": {
+              "imageUrl": "Assets/Sprites/UI/Buttons/bouton_credits1.png",
+              "startingCoordinate": {
+                "x": 0,
+                "y": 0
+              },
+              "PreferredSize": {
+                "width": 400,
+                "height": 250
+              },
+              "displayOptions": "Tiled"
+            },
+            "listeners": [
+              {
+                "name": "mouse",
+                "methods": [
+                  {
+                    "name": "onPressed",
+                    "functionName": "Inputs.ButtonsCallback.changeView",
+                    "imageUrl": "Assets/Sprites/UI/Buttons/bouton_solo1.png",
+                    "songUrl": "todo.wav",
+                    "nextView": "WorldSelection"
+                  }
+                ]
+              }
+            ],
+            "options": [
+              {"text": "Credits"},
+              {"isEnable": true},
+              {"PreferredSize": {
+                "width": 150,
+                "height": 50
+              }},
+              {"nextView": "CreditsView"}
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

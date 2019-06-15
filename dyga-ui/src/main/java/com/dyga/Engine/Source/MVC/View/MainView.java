@@ -19,6 +19,8 @@ import com.dyga.Engine.Source.Utils.WrapLayout;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.awt.image.BufferedImage;
+import java.text.DecimalFormat;
 import java.util.Dictionary;
 import java.util.Hashtable;
 import java.util.List;
@@ -37,7 +39,9 @@ public class MainView {
     private MainControler mainControler;
 
     private JFrame gameFrame;
-    private ViewPanel activeGameView;
+    private static ViewPanel activeGameView;
+
+    private static Image screenImage;
 
     /** This let the user get view component by using UUID from the model components */
     private static Dictionary<UUID, JComponent> activeViewComponentsByModel;
@@ -48,15 +52,23 @@ public class MainView {
     // SHOULD BE IN THE MODEL AND THAT'S IT
     private Dictionary<UUID, EntityView> activeEntitiesByModel;
 
+
+    /** Others **/
+    private DecimalFormat df = new DecimalFormat("0.##");  // 2 dp
+
     /**
      * Basic contructor
+     * @param activeRendering if true, turn off all paint events.
      */
-    public MainView(String gameName) {
+    public MainView(String gameName, boolean activeRendering) {
         this.activeViewComponentsByModel = new Hashtable<>();
         activeLayersView = new Hashtable<>();
         activeEntitiesByModel = new Hashtable<>();
 
         this.gameFrame = new JFrame(gameName);
+        this.gameFrame.setIgnoreRepaint(activeRendering);
+
+        this.screenImage = new BufferedImage(100, 100, BufferedImage.TYPE_INT_ARGB);
     }
 
     /**
@@ -80,12 +92,65 @@ public class MainView {
         this.gameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
+    public static void paintScreen() {
+        Graphics graphics;
+        try {
+            // Retrieve the graphics from the current view
+            graphics = MainView.getCurrentViewGraphics();
+            if (graphics != null && screenImage != null) {
+                graphics.drawImage(screenImage, 0, 0, null);
+            }
+            graphics.dispose();
+        } catch (Exception exception) {
+            System.out.println("Graphics context error: " + exception);
+        }
+    }
+
+
+    public void renderActiveView(double averageFPS, double averageUPS)
+    {
+        if (dbImage == null){
+            dbImage = createImage(pWidth, pHeight);
+            if (dbImage == null) {
+                System.out.println("dbImage is null");
+                return;
+            }
+            else
+                dbg = dbImage.getGraphics();
+        }
+
+        // clear the background
+        dbg.setColor(Color.white);
+        dbg.fillRect(0, 0, pWidth, pHeight);
+
+        dbg.setColor(Color.blue);
+        dbg.setFont(font);
+
+        // report frame count & average FPS and UPS at top left
+        // dbg.drawString("Frame Count " + frameCount, 10, 25);
+        dbg.drawString("Average FPS/UPS: " + df.format(averageFPS) + ", " +
+            df.format(averageUPS), 20, 25);
+
+        // report time used and bosex used at bottom left
+        dbg.drawString("Time Spent: " + timeSpentInGame + " secs", 10, pHeight-15);
+        dbg.drawString("Boxes used: " + boxesUsed, 260, pHeight-15);
+
+        // draw the pause and quit 'buttons'
+        drawButtons(dbg);
+
+        dbg.setColor(Color.black);
+
+        // draw game elements: the obstacles and the worm
+        obs.draw(dbg);
+        fred.draw(dbg);
+    }
+
     /**
      * Method used to repaint the view.
      * Can be called when an input has been received or (??) when it has been tag explicitly by the game loop
      */
     // Private ? Public ?
-    public void paint() {
+    public void paint(double averageFPS, double averageUPS) {
 
         // Get the current modelView display thanks to the model
         ModelView menuView = this.mainModel.getCurrentView();
@@ -142,10 +207,20 @@ public class MainView {
         }
 
         // Create a GameView for the entity only
-        ViewPanel entitiesPanel = new ViewPanel("Assets/Sprites/Enemy/Idle/mad_monk_stop_left.png");
+        ViewPanel entitiesPanel = new ViewPanel("com.dyga.Engine.LodeRunnerGame/Assets/Sprites/Enemy/Idle/mad_monk_stop_left.png");
         entitiesPanel.setPreferredSize(new Dimension(300, 310));
 
         //this.gameFrame.getContentPane().add(layeredPane, BorderLayout.CENTER);
+
+        Graphics dbg = this.activeGameView.getGraphics();
+
+        if(dbg != null) {
+            // report frame count & average FPS and UPS at top left
+            // dbg.drawString("Frame Count " + frameCount, 10, 25);
+            dbg.drawString("Average FPS/UPS: " + df.format(averageFPS) + ", " +
+                df.format(averageUPS), 20, 25);
+        }
+
 
         this.activeGameView.repaint();
         this.gameFrame.repaint();
@@ -159,12 +234,18 @@ public class MainView {
      * @return
      */
     private static ViewPanel createView(ModelPanel mainComponent, MainControler c) {
-        ViewPanel currentView = new ViewPanel(mainComponent.getBackgroundImageUrl());
-        if(mainComponent.getBackgroundPreferredSize() != null)
-            currentView.setPreferredSize(mainComponent.getBackgroundPreferredSize().width, mainComponent.getBackgroundPreferredSize().height);
-        if(mainComponent.getBackgroundStartingPoint() != null)
-            currentView.setStartingCoordinate(mainComponent.getBackgroundStartingPoint().x, mainComponent.getBackgroundStartingPoint().y);
+        ViewPanel currentView = new ViewPanel();
+        String imageUrl;
 
+        if((imageUrl = mainComponent.getBackgroundImageUrl()) != null) {
+            currentView.setBackgroundImage(imageUrl);
+        }
+        if(mainComponent.getBackgroundPreferredSize() != null) {
+            currentView.setPreferredSize(mainComponent.getBackgroundPreferredSize().width, mainComponent.getBackgroundPreferredSize().height);
+        }
+        if(mainComponent.getBackgroundStartingPoint() != null) {
+            currentView.setStartingCoordinate(mainComponent.getBackgroundStartingPoint().x, mainComponent.getBackgroundStartingPoint().y);
+        }
         Layout layout = mainComponent.getLayout();
         switch (layout.name) {
             case BorderLayout: currentView.setLayout(new BorderLayout()); break;
@@ -250,7 +331,7 @@ public class MainView {
         return activeViewComponentsByModel.get(uuid);
     }
 
-    public void show() {
-        paint();
+    public static Graphics getCurrentViewGraphics() {
+        return activeGameView.getGraphics();
     }
 }

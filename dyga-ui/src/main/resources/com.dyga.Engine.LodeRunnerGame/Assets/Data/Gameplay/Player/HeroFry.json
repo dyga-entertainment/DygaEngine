@@ -1,0 +1,53 @@
+{
+  "name": "HeroFry",
+  "stats": {
+    "heathPoint": 100,
+    "speed": 2
+  },
+  "animations": [
+    {
+      "name": "Idle",
+      "Frame": [
+        {
+          "Frame": 1,
+          "sprite": "idle1"
+        }
+      ]
+    },
+    {
+      "name": "Walk",
+      "Frame": [
+        {
+          "Frame": 1,
+          "sprite": "walk1"
+        },
+        {
+          "Frame": 1,
+          "sprite": "walk2"
+        },
+        {
+          "Frame": 1,
+          "sprite": "walk2"
+        }
+      ]
+    },
+    {
+      "name": "Fall",
+      "Frame": [
+        {
+          "Frame": 1,
+          "sprite": "Fall1"
+        },
+        {
+          "Frame": 1,
+          "sprite": "Fall2"
+        }
+      ]
+    }
+  ],
+  "inventory": [
+    {
+      "name": "small bombs"
+    }
+  ]
+}
