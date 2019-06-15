@@ -3,12 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>dyga-engine</artifactId>
         <groupId>com.dyga-entertainment.dyga-engine</groupId>
+        <artifactId>dyga-engine</artifactId>
         <version>0.2</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- We do not specify the groupId and version to keep the same as the parent -->
     <artifactId>dyga-ui</artifactId>
 
     <!-- See https://maven.apache.org/pom.html#Properties -->
@@ -47,8 +48,31 @@
                 <configuration>
                     <source>8</source>
                     <target>8</target>
+                    <!-- Exclude the test folder from the build -->
+                    <excludes>
+                        <exclude>**/src/test/java/**/*.java</exclude>
+                    </excludes>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <executions>
+                    <execution>
+                        <id>default-testCompile</id>
+                        <phase>test-compile</phase>
+                        <goals>
+                            <goal>testCompile</goal>
+                        </goals>
+                        <!-- This is not recommanded and should be removed. Only for test -->
+                        <configuration>
+                            <skip>true</skip>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
             <plugin>
                 <artifactId>maven-resources-plugin</artifactId>
                 <version>3.1.0</version>

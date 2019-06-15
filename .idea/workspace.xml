@@ -2,8 +2,113 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1965d4b1-93b3-42f9-ba48-2fa129f30f22" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.travis/core-bintray.json" beforeDir="false" afterPath="$PROJECT_DIR$/.travis/core-bintray.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.travis/ui-bintray.json" beforeDir="false" afterPath="$PROJECT_DIR$/.travis/ui-bintray.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/Main/GameLoop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-core/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-ui/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/LodeRunnerGame/LodeRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/LodeRunnerGame/LodeRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/Controler/MainControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/Controler/MainControler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/Model/MainModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/Model/MainModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/View/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/View/MainView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/View/Menu/Component/ViewPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/View/Menu/Component/ViewPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/Main/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/Main/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/Utils/EntityLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/Utils/JsonLoaders/EntityLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/Utils/Images.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/Utils/Images.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/Utils/JsonLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/Utils/JsonLoaders/JsonLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/Utils/LevelLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/Utils/JsonLoaders/LevelLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/Utils/MenuLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/Utils/JsonLoaders/MenuLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/Data/audio/SoundSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/Data/audio/SoundSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/Data/audio/TestAudio.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/Data/audio/TestAudio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/Data/audio/ThreadPiste.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/Data/audio/ThreadPiste.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/Data/levels/MondeDemonstration.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/Data/levels/MondeDemonstration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/Data/levels/MondeJungle.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/Data/levels/MondeJungle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/Data/levels/MondeSnow.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/Data/levels/MondeSnow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/Data/levels/ProfilData.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/Data/levels/ProfilData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/GameCode/Test2.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/GameCode/Test2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/Actions/PlayerInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/Actions/PlayerInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/Actions/ThreadAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/Actions/ThreadAnimation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/Actions/ThreadCreuser.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/Actions/ThreadCreuser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/Actions/Timer.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/Actions/Timer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/GameModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/GameModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/MainModelLegacy.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/MainModelLegacy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/MenuModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/MenuModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/bloc/Bloc.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/bloc/Bloc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/bloc/BlocBarreTraversee.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/bloc/BlocBarreTraversee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/bloc/BlocBrique.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/bloc/BlocBrique.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/bloc/BlocEchelle.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/bloc/BlocEchelle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/bloc/BlocGlu.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/bloc/BlocGlu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/bloc/BlocPortailFinNiveau.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/bloc/BlocPortailFinNiveau.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/bloc/BlocTerre.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/bloc/BlocTerre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/bloc/C.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/bloc/C.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/item/Gadget.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/item/Gadget.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/item/Gaz.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/item/Gaz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/item/GrosseBombe.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/item/GrosseBombe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/item/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/item/Lingot.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/item/Lingot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/item/PetiteBombe.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/item/PetiteBombe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/item/Pioche.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/item/Pioche.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/item/PotDeGlu.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/item/PotDeGlu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/jeu/Carte.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/jeu/Carte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/jeu/Coordonnees.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/jeu/Coordonnees.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/jeu/Joueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/jeu/Joueur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/jeu/Monde.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/jeu/Monde.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/jeu/Niveau.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/jeu/Niveau.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/jeu/Positionnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/jeu/Positionnable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/jeu/Sprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/jeu/Sprite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/personnage/Heros.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/personnage/Heros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/personnage/IAMadMonk.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/personnage/IAMadMonk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/personnage/IANaive.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/personnage/IANaive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/personnage/Joueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/personnage/Joueur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/personnage/MadMonk.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/personnage/MadMonk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/Model/personnage/Personnage.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/personnage/Personnage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/View/Bandeau.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/Bandeau.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/View/Buttons/ContextTransitionButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/Buttons/ContextTransitionButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/View/Buttons/StandardButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/Buttons/StandardButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/View/FenetrePrincipale.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/FenetrePrincipale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/View/GameViews/GameContentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/GameViews/GameContentView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/View/GameViews/GameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/GameViews/GameView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/View/GameViews/HeadUpDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/GameViews/HeadUpDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/View/IHM2.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/IHM2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/View/IHM6.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/IHM6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/View/IHM9.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/IHM9.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/View/IHMB2.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/IHMB2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/View/IHMB3.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/IHMB3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/View/IHMB4.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/IHMB4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/View/IHMB5.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/IHMB5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/View/IHMB6.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/IHMB6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/View/IHMB7.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/IHMB7.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/View/IHMB8.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/IHMB8.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/View/IHMB9.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/IHMB9.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/View/JPButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/JPButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/View/MenuViews/CreditView.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/MenuViews/CreditView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/View/MenuViews/HomeMenuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/MenuViews/HomeMenuView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/View/MenuViews/LevelSelectionView.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/MenuViews/LevelSelectionView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/View/MenuViews/LoadingView.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/MenuViews/LoadingView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/View/MenuViews/ProfilsView.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/MenuViews/ProfilsView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/View/MenuViews/SettingsView.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/MenuViews/SettingsView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/View/MenuViews/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/MenuViews/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/View/MenuViews/ViewManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/MenuViews/ViewManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/MVC/View/MenuViews/WorldSelectionView.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/MenuViews/WorldSelectionView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/Utils/exceptions/AnimationNonReconnueException.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/Utils/exceptions/AnimationNonReconnueException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/Utils/exceptions/BlocNonCreusableException.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/Utils/exceptions/BlocNonCreusableException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/Utils/exceptions/CasePriseException.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/Utils/exceptions/CasePriseException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/Utils/exceptions/ErreurGadgetException.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/Utils/exceptions/ErreurGadgetException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/Utils/exceptions/InventaireVideException.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/Utils/exceptions/InventaireVideException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/java/Utils/helper/ImagesMadMonk.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/Utils/helper/ImagesMadMonk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/tests/NiveauAxel.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/tests/NiveauAxel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/tests/NiveauDamien.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/tests/NiveauDamien.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/tests/NiveauDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/tests/NiveauDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/tests/NiveauGregoire.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/tests/NiveauGregoire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/tests/NiveauYann.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/tests/NiveauYann.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/src/main/legacy/javaOld/tests/TestModeleJeu.java" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/tests/TestModeleJeu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dyga-ui/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dyga-ui/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/.travis/core-bintray.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/.travis/core-bintray.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/.travis/ui-bintray.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/.travis/ui-bintray.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -18,49 +123,64 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="dyga-engine" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="47" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.travis.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dyga-core/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.travis/ui-bintray.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/View/MainView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="49" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="247">
+              <caret line="109" column="69" selection-start-line="109" selection-start-column="69" selection-end-line="109" selection-end-column="69" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3159#3300#0" expanded="true" />
+                <element signature="e#3299#3300#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/Model/Menu/ModelView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/Main/Game.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="178">
+              <caret line="187" column="19" lean-forward="true" selection-start-line="187" selection-start-column="19" selection-end-line="187" selection-end-column="19" />
+              <folding>
+                <element signature="e#4797#4798#0" expanded="true" />
+                <element signature="e#4839#4840#0" expanded="true" />
+                <element signature="e#6086#6087#0" expanded="true" />
+                <element signature="e#6135#6136#0" expanded="true" />
+                <element signature="e#6204#6205#0" expanded="true" />
+                <element signature="e#6265#6266#0" expanded="true" />
+                <element signature="e#6334#6335#0" expanded="true" />
+                <element signature="e#6395#6396#0" expanded="true" />
+                <element signature="e#6594#6595#0" expanded="true" />
+                <element signature="e#6658#6659#0" expanded="true" />
+                <element signature="e#6699#6700#0" expanded="true" />
+                <element signature="e#6745#6746#0" expanded="true" />
+                <element signature="e#8133#8134#0" expanded="true" />
+                <element signature="e#8193#8194#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/Main/GameLoop.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,24 +189,67 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dyga-ui/pom.xml">
+        <entry file="file://$PROJECT_DIR$/dyga-ui/src/test/java/chs3and4Code/Worm/WormUFS/WormPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+            <state relative-caret-position="301">
+              <caret line="327" column="10" lean-forward="true" selection-start-line="327" selection-start-column="10" selection-end-line="327" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.travis/core-bintray.json">
+        <entry file="file://$PROJECT_DIR$/dyga-ui/src/test/java/chs3and4Code/Worm/WormUFS/Obstacles.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+            <state relative-caret-position="242">
+              <caret line="49" column="22" lean-forward="true" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dyga-ui/src/test/java/chs3and4Code/Worm/WormUFS/WormChase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="244">
+              <caret line="86" column="33" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/LodeRunnerGame/LodeRunner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="33" selection-start-line="13" selection-end-line="14" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>getCurrentViewGraphics</find>
+      <find>excess</find>
+      <find>Cannot load the following json file</find>
+      <find>dbImage</find>
+      <find>mainView</find>
+      <find>paint</find>
+      <find>activeGameView</find>
+      <find>period</find>
+      <find>fpsStore</find>
+      <find>metrics</find>
+      <find>Main</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -99,17 +262,26 @@
         <option value="$USER_HOME$/.m2/settings.xml" />
         <option value="$PROJECT_DIR$/descriptor.json" />
         <option value="$PROJECT_DIR$/target/bintray.json" />
-        <option value="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/View/Menu/Component/ViewPanel.java" />
-        <option value="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/Controler/MainControler.java" />
-        <option value="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/View/MainView.java" />
         <option value="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/View/Menu/Component/ViewButton.java" />
         <option value="$PROJECT_DIR$/bintray.json" />
         <option value="$PROJECT_DIR$/.travis.yml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/dyga-core/pom.xml" />
-        <option value="$PROJECT_DIR$/dyga-ui/pom.xml" />
         <option value="$PROJECT_DIR$/.travis/core-bintray.json" />
         <option value="$PROJECT_DIR$/.travis/ui-bintray.json" />
+        <option value="$PROJECT_DIR$/dyga-core/src/main/java/com/dyga/Engine/GameLoop.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/dyga-core/pom.xml" />
+        <option value="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/View/Menu/Component/ViewPanel.java" />
+        <option value="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/Utils/Images.java" />
+        <option value="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/Main/GameLoop.java" />
+        <option value="$PROJECT_DIR$/dyga-ui/src/test/java/chs3and4Code/Worm/WormUFS/Obstacles.java" />
+        <option value="$PROJECT_DIR$/dyga-ui/src/test/java/chs3and4Code/Worm/WormUFS/Worm.java" />
+        <option value="$PROJECT_DIR$/dyga-ui/src/test/java/chs3and4Code/Worm/WormUFS/WormChase.java" />
+        <option value="$PROJECT_DIR$/dyga-ui/src/test/java/chs3and4Code/Worm/WormUFS/WormPanel.java" />
+        <option value="$PROJECT_DIR$/dyga-ui/pom.xml" />
+        <option value="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/LodeRunnerGame/LodeRunner.java" />
+        <option value="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/Controler/MainControler.java" />
+        <option value="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/Main/Game.java" />
+        <option value="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/View/MainView.java" />
       </list>
     </option>
   </component>
@@ -125,10 +297,6 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="Profiles" type="6783ec58:MavenProjectsStructure$ProfilesNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="dyga-engine" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
@@ -141,17 +309,16 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="695" />
-    <option name="y" value="120" />
-    <option name="width" value="1135" />
-    <option name="height" value="875" />
+    <option name="x" value="1045" />
+    <option name="y" value="18" />
+    <option name="width" value="845" />
+    <option name="height" value="1090" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -164,11 +331,125 @@
               <item name="dyga-engine" type="462c0819:PsiDirectoryNode" />
               <item name=".travis" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="dyga-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dyga-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="dyga-core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dyga-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dyga-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="dyga-ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dyga-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dyga-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="dyga-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dyga-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dyga-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="dyga-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dyga-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dyga-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="dyga-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dyga-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dyga-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="dyga-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Engine" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dyga-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dyga-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="dyga-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Engine" type="462c0819:PsiDirectoryNode" />
+              <item name="LodeRunnerGame" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dyga-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dyga-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="dyga-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Engine" type="462c0819:PsiDirectoryNode" />
+              <item name="Source" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dyga-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dyga-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="dyga-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Engine" type="462c0819:PsiDirectoryNode" />
+              <item name="Source" type="462c0819:PsiDirectoryNode" />
+              <item name="Main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dyga-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dyga-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="dyga-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dyga-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dyga-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="dyga-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dyga-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dyga-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="dyga-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dyga-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dyga-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="dyga-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Worm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dyga-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dyga-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="dyga-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Worm" type="462c0819:PsiDirectoryNode" />
+              <item name="WormUFS" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -178,15 +459,22 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Git\DygaEngine\.travis" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Git\dyga-engine\dyga-ui\src\main\resources" />
+      <recent name="D:\Git\dyga-engine\dyga-ui\src\main\resources\com.dyga.Engine.LodeRunnerGame" />
+      <recent name="D:\Git\dyga-engine\dyga-core\src\main" />
       <recent name="D:\Git\DygaEngine\.travis" />
       <recent name="D:\Git\DygaEngine\dyga-ui" />
     </key>
@@ -204,13 +492,38 @@
     </option>
   </component>
   <component name="RunManager" selected="JAR Application.dyga-ui-0.2-sources.jar">
-    <configuration name="dyga-engine-1.1-SNAPSHOT-jar-with-dependencies.jar" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/target/dyga-engine-1.1-SNAPSHOT-jar-with-dependencies.jar" />
-      <method v="2" />
+    <configuration name="LodeRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dyga.Engine.LodeRunnerGame.LodeRunner" />
+      <module name="dyga-ui" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dyga.Engine.LodeRunnerGame.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="dyga-engine-1.1-SNAPSHOT.jar" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/target/dyga-engine-1.1-SNAPSHOT.jar" />
-      <method v="2" />
+    <configuration name="WormChase (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chs3and4Code.Worm.WormUFS.WormChase" />
+      <module name="dyga-ui" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chs3and4Code.Worm.WormUFS.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WormChase" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="WormChase" />
+      <module name="dyga-ui" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="dyga-ui-0.2-sources.jar" type="JarApplication" temporary="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/dyga-ui/target/dyga-ui-0.2-sources.jar" />
@@ -220,64 +533,13 @@
       <option name="JAR_PATH" value="$PROJECT_DIR$/dyga-ui/target/dyga-ui-0.2.jar" />
       <method v="2" />
     </configuration>
-    <configuration name="lode-runner-1.0-SNAPSHOT-jar-with-dependencies.jar" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/target/lode-runner-1.0-SNAPSHOT-jar-with-dependencies.jar" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <module name="dyga-engine" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <module name="dyga-engine" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JAR Application.dyga-ui-0.2-sources.jar" />
         <item itemvalue="JAR Application.dyga-ui-0.2.jar" />
-        <item itemvalue="JAR Application.dyga-engine-1.1-SNAPSHOT.jar" />
-        <item itemvalue="JAR Application.dyga-engine-1.1-SNAPSHOT-jar-with-dependencies.jar" />
-        <item itemvalue="JAR Application.lode-runner-1.0-SNAPSHOT-jar-with-dependencies.jar" />
+        <item itemvalue="Application.LodeRunner" />
+        <item itemvalue="Application.WormChase (1)" />
+        <item itemvalue="Application.WormChase" />
       </list>
     </recent_temporary>
   </component>
@@ -297,12 +559,17 @@
       <workItem from="1559689680326" duration="114000" />
       <workItem from="1559689813224" duration="7017000" />
       <workItem from="1559781574205" duration="2110000" />
-      <workItem from="1559784196811" duration="2138000" />
+      <workItem from="1559784196811" duration="2737000" />
+      <workItem from="1560097077281" duration="6732000" />
+      <workItem from="1560206476916" duration="6322000" />
+      <workItem from="1560384248871" duration="7055000" />
+      <workItem from="1560468496654" duration="5988000" />
+      <workItem from="1560552582065" duration="7819000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40652000" />
+    <option name="totallyTimeSpent" value="75167000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -317,17 +584,17 @@
     <frame x="62" y="-7" width="1482" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23136428" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49902153" visible="true" weight="0.2644163" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Favorites" order="6" sideWeight="0.50097847" side_tool="true" weight="0.20112517" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3297587" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.34450403" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33512065" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.43431637" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3297587" />
@@ -343,7 +610,7 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Maven" order="6" visible="true" weight="0.2616034" />
+      <window_info anchor="right" id="Maven" order="6" visible="true" weight="0.14345992" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout>
@@ -382,9 +649,94 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/View/MainView.java</url>
+          <line>224</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dyga-ui/src/test/java/chs3and4Code/Worm/WormAFS/WormChase.java</url>
+          <line>1</line>
+          <properties />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/Model/MainModel.java</url>
+          <line>69</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/Model/MainModel.java</url>
+          <line>68</line>
+          <properties />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/Utils/JsonLoaders/MenuLoader.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>this.getClass().getClassLoader().getResource(&quot;/Test2.json&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>MenuLoader.class.getResource(&quot;/Test2.json&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.getClass().getResource(&quot;/Test2.json&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.getClass().getResource(&quot;Test2.json&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.getClass().getResource(&quot;resources/Test2.json&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.getClass().getResource(&quot;src/main/resources/Test2.json&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>ClassLoader.getSystemClassLoader().getResourceAsStream(&quot;src/main/resources/Test2.json&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>ClassLoader.getSystemClassLoader().getResourceAsStream(&quot;src/resources/Test2.json&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>ClassLoader.getSystemClassLoader().getResourceAsStream(&quot;resources/Test2.json&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/Scripts/ResourcesPaths.java" />
@@ -409,26 +761,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-    <entry file="file://$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/View/Menu/Component/ViewPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/Controler/MainControler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="80" column="63" selection-start-line="80" selection-start-column="63" selection-end-line="80" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/View/Menu/Component/ViewButton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -439,61 +771,266 @@
     <entry file="file://$PROJECT_DIR$/target/.travis/ui-bintray.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/View/MainView.java">
+    <entry file="file://$PROJECT_DIR$/dyga-engine.iml" />
+    <entry file="file://$PROJECT_DIR$/target/.travis/core-bintray.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        <state relative-caret-position="425">
+          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis/ui-bintray.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" selection-start-line="31" selection-end-line="31" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dyga-core/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/Model/Menu/Component/ModelComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="47" column="17" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="17" />
+          <folding>
+            <element signature="e#1332#1333#0" expanded="true" />
+            <element signature="e#1378#1379#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis/core-bintray.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1412">
+          <caret line="13" selection-start-line="13" selection-end-line="14" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/View/Menu/Component/ViewPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#403#404#0" expanded="true" />
+            <element signature="e#427#428#0" expanded="true" />
+            <element signature="e#973#974#0" expanded="true" />
+            <element signature="e#1041#1042#0" expanded="true" />
+            <element signature="e#1228#1229#0" expanded="true" />
+            <element signature="e#1268#1269#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files (x86)/Java/lib/src.zip!/jdk.jlink/jdk/tools/jlink/internal/JlinkTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="306" column="23" selection-start-line="306" selection-start-column="23" selection-end-line="306" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dyga-ui/src/test/java/chs3and4Code/Worm/readmeForCh3.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dyga-ui/src/test/java/chs3and4Code/Worm/WormUFS/Worm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dyga-ui/src/test/java/chs3and4Code/Worm/WormAFS/WormChase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="56" column="7" selection-start-line="56" selection-start-column="7" selection-end-line="56" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dyga-ui/src/test/java/chs3and4Code/Worm/readmeForCh4.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dyga-ui/src/main/java/Inputs/ButtonsCallback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="74" column="19" lean-forward="true" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/Utils/JsonLoaders/EntityLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/Utils/Images.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/Utils/WrapLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/Utils/Tuple.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/Utils/JsonLoaders/JsonLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/Utils/JsonLoaders/LevelLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dyga-ui/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="55" column="21" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files (x86)/Java/lib/src.zip!/java.desktop/java/awt/Graphics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="882" column="28" selection-start-line="882" selection-start-column="28" selection-end-line="882" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/Model/MainModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/Utils/JsonLoaders/MenuLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/Controler/MainControler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="176" column="27" selection-start-line="176" selection-start-column="27" selection-end-line="176" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dyga-engine.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
+    <entry file="file://$PROJECT_DIR$/dyga-ui/src/test/java/chs3and4Code/Worm/WormUFS/WormChase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+        <state relative-caret-position="244">
+          <caret line="86" column="33" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/target/.travis/core-bintray.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/Model/Menu/ModelView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="47" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="47" />
+        <state relative-caret-position="68">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dyga-core/pom.xml">
+    <entry file="file://$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/LodeRunnerGame/LodeRunner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+        <state relative-caret-position="221">
+          <caret line="13" column="33" selection-start-line="13" selection-end-line="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dyga-ui/pom.xml">
+    <entry file="file://$PROJECT_DIR$/dyga-ui/src/test/java/chs3and4Code/Worm/WormUFS/Obstacles.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+        <state relative-caret-position="242">
+          <caret line="49" column="22" lean-forward="true" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.travis/core-bintray.json">
+    <entry file="file://$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/Main/GameLoop.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+        <state relative-caret-position="51">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.travis/ui-bintray.json">
+    <entry file="file://$PROJECT_DIR$/dyga-ui/src/test/java/chs3and4Code/Worm/WormUFS/WormPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+        <state relative-caret-position="301">
+          <caret line="327" column="10" lean-forward="true" selection-start-line="327" selection-start-column="10" selection-end-line="327" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/Main/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="187" column="19" lean-forward="true" selection-start-line="187" selection-start-column="19" selection-end-line="187" selection-end-column="19" />
+          <folding>
+            <element signature="e#4797#4798#0" expanded="true" />
+            <element signature="e#4839#4840#0" expanded="true" />
+            <element signature="e#6086#6087#0" expanded="true" />
+            <element signature="e#6135#6136#0" expanded="true" />
+            <element signature="e#6204#6205#0" expanded="true" />
+            <element signature="e#6265#6266#0" expanded="true" />
+            <element signature="e#6334#6335#0" expanded="true" />
+            <element signature="e#6395#6396#0" expanded="true" />
+            <element signature="e#6594#6595#0" expanded="true" />
+            <element signature="e#6658#6659#0" expanded="true" />
+            <element signature="e#6699#6700#0" expanded="true" />
+            <element signature="e#6745#6746#0" expanded="true" />
+            <element signature="e#8133#8134#0" expanded="true" />
+            <element signature="e#8193#8194#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/View/MainView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="109" column="69" selection-start-line="109" selection-start-column="69" selection-end-line="109" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3159#3300#0" expanded="true" />
+            <element signature="e#3299#3300#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

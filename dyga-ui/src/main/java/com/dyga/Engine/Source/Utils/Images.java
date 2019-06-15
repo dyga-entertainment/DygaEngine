@@ -26,10 +26,15 @@ public class Images {
         try {
             // Read from a file
             URL url = Thread.currentThread().getContextClassLoader().getResource(imgfile);
-            bufferedImage = ImageIO.read(url);
-        } catch (IOException e) {
+            if(url != null) {
+                bufferedImage = ImageIO.read(url);
+            } else {
+                url = new File(imgfile).toURI().toURL();
+            }
+        } catch (Exception e) {
             System.err.println("Le fichier " + imgfile + " est introuvable.") ;
-            //System.exit(1);
+            e.printStackTrace();
+            System.exit(1);
         }
         return bufferedImage;
     }
