@@ -2,7 +2,6 @@ package com.dyga.Engine.Source.MVC.View;
 
 import javax.swing.*;
 import com.dyga.Engine.Source.MVC.Controler.MainControler;
-import com.dyga.Engine.Source.MVC.Model.Game.EntityModel;
 import com.dyga.Engine.Source.MVC.Model.MainModel;
 import com.dyga.Engine.Source.MVC.Model.Menu.Component.ModelButton;
 import com.dyga.Engine.Source.MVC.Model.Menu.Component.ModelComponent;
@@ -19,11 +18,9 @@ import com.dyga.Engine.Source.Utils.WrapLayout;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.awt.image.BufferedImage;
 import java.text.DecimalFormat;
 import java.util.Dictionary;
 import java.util.Hashtable;
-import java.util.List;
 import java.util.UUID;
 
 /**
@@ -33,15 +30,18 @@ import java.util.UUID;
  */
 public class MainView {
 
+    private static int WIDTH = 100;
+    private static int HEIGHT = 100;
+
     /** The view know the model in order to get information from him */
     private MainModel mainModel;
     /** The view know the controler as well to attach him to each view. */
     private MainControler mainControler;
 
-    private JFrame gameFrame;
-    private static ViewPanel activeGameView;
+    private static JFrame gameFrame;
+    //private static ViewPanel activeGameView;
+    private static JPanel activeGamePanel;
 
-    private static Image screenImage;
 
     /** This let the user get view component by using UUID from the model components */
     private static Dictionary<UUID, JComponent> activeViewComponentsByModel;
@@ -54,34 +54,39 @@ public class MainView {
 
 
     /** Others **/
+    // off-screen rendering
+    private Graphics dbg;
+    private static Image screenImage;
+
     private DecimalFormat df = new DecimalFormat("0.##");  // 2 dp
 
     /**
      * Basic contructor
-     * @param activeRendering if true, turn off all paint events.
      */
-    public MainView(String gameName, boolean activeRendering) {
+    public MainView(String gameName) {
         this.activeViewComponentsByModel = new Hashtable<>();
         activeLayersView = new Hashtable<>();
         activeEntitiesByModel = new Hashtable<>();
 
         this.gameFrame = new JFrame(gameName);
-        this.gameFrame.setIgnoreRepaint(activeRendering);
-
-        this.screenImage = new BufferedImage(100, 100, BufferedImage.TYPE_INT_ARGB);
     }
 
     /**
      * Init the game view
      * @param mainModel
      * @param mainControler
+     * @param activeRendering if true, turn off all paint events.
      */
-    public void init(MainModel mainModel, MainControler mainControler) {
+    public void init(MainModel mainModel, MainControler mainControler, boolean activeRendering) {
         this.mainModel = mainModel;
         this.mainControler = mainControler;
 
-        // This info should be getted somewhere else ? Or default ?
-        this.gameFrame.setSize(800, 800);
+        Toolkit tk = Toolkit.getDefaultToolkit();
+        Dimension scrDim = tk.getScreenSize();
+        WIDTH = scrDim.width;
+        HEIGHT = scrDim.height;
+
+        this.gameFrame.setSize(WIDTH, HEIGHT);
 
         // Should be the controler jobs.. ?
         this.gameFrame.addWindowListener(new WindowAdapter() {
@@ -90,13 +95,16 @@ public class MainView {
             }
         });
         this.gameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // TODO ?
+        this.gameFrame.setIgnoreRepaint(activeRendering);
     }
 
     public static void paintScreen() {
         Graphics graphics;
         try {
             // Retrieve the graphics from the current view
-            graphics = MainView.getCurrentViewGraphics();
+            graphics = activeGamePanel.getGraphics();
             if (graphics != null && screenImage != null) {
                 graphics.drawImage(screenImage, 0, 0, null);
             }
@@ -107,42 +115,81 @@ public class MainView {
     }
 
 
-    public void renderActiveView(double averageFPS, double averageUPS)
-    {
-        if (dbImage == null){
-            dbImage = createImage(pWidth, pHeight);
-            if (dbImage == null) {
+    public void renderActiveView(double averageFPS, double averageUPS) {
+        if (this.screenImage == null){
+
+            // Temporary for now =========
+
+            // Create the view (this.activeGameView)
+            createFirstView();
+
+            //activeGamePanel = new JPanel();
+            //gameFrame.getContentPane().add(panel, "Center");
+
+            gameFrame.setUndecorated(true);   // no borders or title bar
+            gameFrame.setIgnoreRepaint(true);  // turn off all paint events since doing active rendering
+            //gameFrame.pack();
+            gameFrame.setResizable(false);
+            gameFrame.setVisible(true);
+
+            // Create the image from the view
+            this.screenImage = activeGamePanel.createImage(WIDTH, HEIGHT);
+
+            if (this.screenImage == null) {
                 System.out.println("dbImage is null");
                 return;
             }
-            else
-                dbg = dbImage.getGraphics();
+            else {
+                dbg = screenImage.getGraphics();
+            }
         }
 
         // clear the background
-        dbg.setColor(Color.white);
-        dbg.fillRect(0, 0, pWidth, pHeight);
+        this.dbg.setColor(Color.white);
+        this.dbg.fillRect(0, 0, WIDTH, HEIGHT);
 
-        dbg.setColor(Color.blue);
-        dbg.setFont(font);
+        this.dbg.setColor(Color.blue);
+        //dbg.setFont(font);
 
         // report frame count & average FPS and UPS at top left
         // dbg.drawString("Frame Count " + frameCount, 10, 25);
-        dbg.drawString("Average FPS/UPS: " + df.format(averageFPS) + ", " +
+        this.dbg.drawString("Average FPS/UPS: " + df.format(averageFPS) + ", " +
             df.format(averageUPS), 20, 25);
 
         // report time used and bosex used at bottom left
-        dbg.drawString("Time Spent: " + timeSpentInGame + " secs", 10, pHeight-15);
-        dbg.drawString("Boxes used: " + boxesUsed, 260, pHeight-15);
+        // TODO
+        //this.dbg.drawString("Time Spent: " + timeSpentInGame + " secs", 10, HEIGHT-15);
+        //this.dbg.drawString("Boxes used: " + boxesUsed, 260, HEIGHT-15);
 
         // draw the pause and quit 'buttons'
-        drawButtons(dbg);
+        // TODO
+        //drawButtons(dbg);
 
-        dbg.setColor(Color.black);
+        this.dbg.setColor(Color.black);
 
         // draw game elements: the obstacles and the worm
-        obs.draw(dbg);
-        fred.draw(dbg);
+        // TODO
+        //obs.draw(dbg);
+        //fred.draw(dbg);
+    }
+
+
+    private void createFirstView() {
+        System.out.println("[DEBUG] CREATE THE VIEW");
+
+        // Temporary for now =========
+        gameFrame.getContentPane().removeAll();
+        //gameFrame.getContentPane().validate();
+
+        // Get the current modelView display thanks to the model
+        ModelView menuView = this.mainModel.getCurrentView();
+
+        System.out.println("[DEBUG] Build a new ViewPanel to display = " + menuView.getName());
+        ModelPanel mainComponent = menuView.getModelComponent();
+        this.activeGamePanel = createView(mainComponent, this.mainControler);
+
+        // Add it at the end !
+        gameFrame.getContentPane().add(this.activeGamePanel);
     }
 
     /**
@@ -150,6 +197,7 @@ public class MainView {
      * Can be called when an input has been received or (??) when it has been tag explicitly by the game loop
      */
     // Private ? Public ?
+    /*
     public void paint(double averageFPS, double averageUPS) {
 
         // Get the current modelView display thanks to the model
@@ -172,14 +220,6 @@ public class MainView {
                     this.activeGameView.setName(menuView.getName());
                 }
 
-                // Paint others layers if needed
-                /*if() {
-                    // Paint the level layer
-                }
-
-                if() {
-                    // Paint the entities layer
-                }*/
                 List<EntityModel> entities = this.mainModel.getCurrentEntities();
                 if(entities != null) {
                     for(EntityModel entity : entities) {
@@ -225,7 +265,7 @@ public class MainView {
         this.activeGameView.repaint();
         this.gameFrame.repaint();
         this.gameFrame.setVisible(true);
-    }
+    }*/
 
     /**
      * Helper method to create a swing view from scratch
@@ -234,7 +274,7 @@ public class MainView {
      * @return
      */
     private static ViewPanel createView(ModelPanel mainComponent, MainControler c) {
-        ViewPanel currentView = new ViewPanel();
+        ViewPanel currentView = new ViewPanel(WIDTH, HEIGHT);
         String imageUrl;
 
         if((imageUrl = mainComponent.getBackgroundImageUrl()) != null) {
@@ -329,9 +369,5 @@ public class MainView {
 
     public JComponent getViewComponentByUuid (UUID uuid) {
         return activeViewComponentsByModel.get(uuid);
-    }
-
-    public static Graphics getCurrentViewGraphics() {
-        return activeGameView.getGraphics();
     }
 }
