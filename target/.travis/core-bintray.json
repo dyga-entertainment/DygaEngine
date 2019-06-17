@@ -18,7 +18,7 @@
   "version": {
     "name": "0.2",
     "desc": "Early version of the engine to test bintray upload.",
-    "released": "2019-06-15T16:54:45Z",
+    "released": "2019-06-17T01:32:41Z",
     "vcs_tag": "0.2",
     "gpgSign": false
   },
