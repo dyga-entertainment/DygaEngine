@@ -14,7 +14,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.UUID;
 
-import static com.dyga.Engine.Source.Utils.GameStatsHelper.storeStats;
 import static com.dyga.Engine.Source.Utils.Math.Converter.*;
 
 /**
@@ -49,14 +48,19 @@ public class Game {
     private static String[] levels;
     private static String[] gameEntities;
 
+    /** Game Loop parameters **/
+    private long overSleepTime = 0L;
+    private long excess = 0L;
+    private int noDelays = 0;
+
     /** FPS / UPS Stats **/
     static GameStatsHelper gameStatsHelper;
 
-    private static long frameTimeNs;       // period of time between each drawing in ms
+    private long frameTimeNs;       // period of time between each drawing in ms
 
     // TODO
-    public static boolean running = false;    // stops the animation
-    public static boolean gameOver = false;   // for game termination
+    public boolean running = false;    // stops the animation
+    public boolean gameOver = false;   // for game termination
 
     private static final int MAX_FRAME_SKIPS = 5;   // was 2;
     // no. of frames that can be skipped in any one animation loop
@@ -75,69 +79,73 @@ public class Game {
         Game.mainView = new MainView(gameName);
 
         // a period of time each loop should take (in ms)
-        Game.frameTimeNs = convertMillisecToNanosec((long) 1000.0/targetFPS);
+        this.frameTimeNs = convertMillisecToNanosec((long) 1000.0/targetFPS);
 
         System.out.println("fps: " + targetFPS + "; period: " + (long) 1000.0/targetFPS + " ms");
 
-        gameStatsHelper = new GameStatsHelper();
+        this.gameStatsHelper = new GameStatsHelper();
 
         // Create game components
         // TODO here ??
     }
 
-    public static void run() {
-        long overSleepTime = 0L;
-        long excess = 0L;
-        int noDelays = 0;
-
+    public void run() {
         // init the Game Engine
         initGameEngine();
 
-        running = true;
-        while (running) {
+        // Start the game loop
+        this.running = true;
+        while (this.running) {
 
             // Take a snapshot of the time
-            long timeBeforeUpdate = java.lang.System.nanoTime();
-
+            long timeBeginFrame = java.lang.System.nanoTime();
             gameUpdate();
             gameRender();
             paintScreen();
+            long timeEndFrame = java.lang.System.nanoTime();
 
-            long timeAfterUpdate = java.lang.System.nanoTime();
+            this.endFrameIteration(timeBeginFrame, timeEndFrame);
 
-            // Compute how much time the frame computation took
-            long timeDiff = timeAfterUpdate - timeBeforeUpdate;
-
-            // time left in this loop
-            long timeLeft = (frameTimeNs - timeDiff) - overSleepTime;
-
-            // if there is some time left, sleep until it's done
-            if (timeLeft > 0) {   // some time left in this cycle
-                try {
-                    Thread.sleep(convertNanosecToMillisec(timeLeft));  // nano -> ms
-                }
-                catch(InterruptedException ex){}
-
-                // Since the process contains arbitrary delays, compute the delay
-                overSleepTime = (java.lang.System.nanoTime() - timeAfterUpdate) - timeLeft;
-            } else {
-                // sleepTime <= 0; the frame took longer than the period
-                excess -= timeLeft;  // store excess time value
-                overSleepTime = 0L;
-
-                // We do not catch up this
-                if (++noDelays >= NO_DELAYS_PER_YIELD) {
-                    Thread.yield();   // give another thread a chance to run
-                    noDelays = 0;
-                }
-            }
-            storeStats(Game.frameTimeNs);
+            this.gameStatsHelper.storeStats(this.frameTimeNs);
         }
+
+        // Exit the application
         System.exit(0);
     }
 
-    public static void stopGameLoop() {
-        running = false;
+    private void endFrameIteration(long timeBeforeUpdate, long timeAfterUpdate) {
+        // Compute how much time the frame computation took
+        long timeDiff = timeAfterUpdate - timeBeforeUpdate;
+
+        // time left in this loop
+        long timeLeft = (this.frameTimeNs - timeDiff) - this.overSleepTime;
+
+        // if there is some time left, sleep until it's done
+        if (timeLeft > 0) {   // some time left in this cycle
+            try {
+                Thread.sleep(convertNanosecToMillisec(timeLeft));  // nano -> ms
+            }
+            catch (InterruptedException ex) {
+                // Nothing
+            }
+
+            // Since the process contains arbitrary delays, compute the delay
+            this.overSleepTime = (java.lang.System.nanoTime() - timeAfterUpdate) - timeLeft;
+        } else {
+            // sleepTime <= 0; the frame took longer than the period
+            this.excess -= timeLeft;  // store excess time value
+            this.overSleepTime = 0L;
+
+            // We do not catch up this
+            if (++this.noDelays >= NO_DELAYS_PER_YIELD) {
+                Thread.yield();   // give another thread a chance to run
+                this.noDelays = 0;
+            }
+        }
+    }
+
+    public void stopGameLoop() {
+        this.running = false;
     }
 
     private static void gameUpdate() {
@@ -150,7 +158,7 @@ public class Game {
     }
 
     private static void paintScreen() {
-        // Nothing yet
+
         mainView.paintScreen();
     }
 
