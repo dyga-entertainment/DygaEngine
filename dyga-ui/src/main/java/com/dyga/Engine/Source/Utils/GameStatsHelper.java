@@ -15,31 +15,31 @@ public class GameStatsHelper {
     // number of FPS values stored to get an average
     public static final int NUM_FPS = 10;
 
+    private static final DecimalFormat timedf = new DecimalFormat("0.####");  // 4 dp
+    private static final DecimalFormat df = new DecimalFormat("0.##");  // 2 dps
+
     // used for gathering statistics
-    private static long statsIntervalNs = 0L;    // in ns
+    private long statsIntervalNs = 0L;    // in ns
 
-    private static long totalElapsedTimeNs = 0L;
+    private long totalElapsedTimeNs = 0L;
 
-    private static long frameCount = 0;
+    private long frameCount = 0;
 
-    private static long statsCount = 0;
+    private long statsCount = 0;
 
-    private static long framesSkipped = 0L;
-    private static long totalFramesSkipped = 0L;
+    private long framesSkipped = 0L;
+    private long totalFramesSkipped = 0L;
 
-    private static double fpsStore[];
-    private static double upsStore[];
+    private double fpsStore[];
+    private double upsStore[];
 
-    private static long gameStartTime;
-    private static long prevStatsTimeNs;
+    private long gameStartTime;
+    private long prevStatsTimeNs;
 
     // Stats variables
-    private static int timeSpentInGameSec = 0;
-    private static double averageFPS = 0.0;
-    private static double averageUPS = 0.0;
-
-    private static DecimalFormat timedf = new DecimalFormat("0.####");  // 4 dp
-    private static DecimalFormat df = new DecimalFormat("0.##");  // 2 dps
+    private int timeSpentInGameSec = 0;
+    private double averageFPS = 0.0;
+    private double averageUPS = 0.0;
 
     // initialise timing elements
     public void initStatsVariables() {
@@ -69,7 +69,7 @@ public class GameStatsHelper {
          the average FPS & UPS over the last NUM_FPSs intervals.
 
      The data is collected every MAX_STATS_INTERVAL  (1 sec). */
-    public static void storeStats(long frameTimeNs) {
+    public void storeStats(long frameTimeNs) {
         // increment the number of frame
         frameCount++;
 

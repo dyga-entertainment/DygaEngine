@@ -99,7 +99,7 @@ public class WormPanel extends JPanel implements Runnable
 
     Toolkit tk = Toolkit.getDefaultToolkit();
     Dimension scrDim = tk.getScreenSize();
-    pWidth = scrDim.width;
+    pWidth = scrDim.width - 200;
     pHeight = scrDim.height;
 
     setBackground(Color.white);

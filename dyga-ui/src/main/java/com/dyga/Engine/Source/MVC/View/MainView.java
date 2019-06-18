@@ -30,7 +30,7 @@ import java.util.UUID;
  */
 public class MainView {
 
-    private static int WIDTH = 100;
+    private static int WIDTH = 300;
     private static int HEIGHT = 100;
 
     /** The view know the model in order to get information from him */
@@ -158,12 +158,12 @@ public class MainView {
 
         // report time used and bosex used at bottom left
         // TODO
-        //this.dbg.drawString("Time Spent: " + timeSpentInGame + " secs", 10, HEIGHT-15);
-        //this.dbg.drawString("Boxes used: " + boxesUsed, 260, HEIGHT-15);
+        this.dbg.drawString("Time Spent: " + 500 + " secs", 10, HEIGHT-15);
+        this.dbg.drawString("Boxes used: " + 5000000, 260, HEIGHT-15);
 
         // draw the pause and quit 'buttons'
         // TODO
-        //drawButtons(dbg);
+        drawButtons(dbg);
 
         this.dbg.setColor(Color.black);
 
@@ -173,6 +173,36 @@ public class MainView {
         //fred.draw(dbg);
     }
 
+    private void drawButtons(Graphics g)
+    {
+        Rectangle pauseArea = new Rectangle(WIDTH-100, HEIGHT-45, 70, 15);
+        Rectangle quitArea = new Rectangle(WIDTH-100, HEIGHT-20, 70, 15);
+
+        g.setColor(Color.black);
+
+        // draw the pause 'button'
+        //if (isOverPauseButton)
+            g.setColor(Color.green);
+
+        g.drawOval( pauseArea.x, pauseArea.y, pauseArea.width, pauseArea.height);
+        if (true)
+            g.drawString("Paused", pauseArea.x, pauseArea.y+10);
+        else
+            g.drawString("Pause", pauseArea.x+5, pauseArea.y+10);
+
+        if (false)
+            g.setColor(Color.black);
+
+        // draw the quit 'button'
+        if (true)
+            g.setColor(Color.green);
+
+        g.drawOval(quitArea.x, quitArea.y, quitArea.width, quitArea.height);
+        g.drawString("Quit", quitArea.x+15, quitArea.y+10);
+
+        if (false)
+            g.setColor(Color.black);
+    }  // drawButtons()
 
     private void createFirstView() {
         System.out.println("[DEBUG] CREATE THE VIEW");
