@@ -1,0 +1,45 @@
+{
+  "name": "GameView",
+  "view": {
+    "type": "Panel",
+    "background": {
+      "imageUrl": "Sprites/UI/Backgrounds/background_hell.png",
+      "startingCoordinate": {
+        "x": 0,
+        "y": 0
+      },
+      "displayOptions": "Single"
+    },
+    "options": [
+      {"isOpaque": true},
+      {
+        "layout": {
+          "name": "BorderLayout"
+        }
+      }
+    ],
+    "components": [
+      {
+        "type": "Panel",
+        "background": {
+          "imageUrl": "Sprites/UI/bandeau_menu.png",
+          "startingCoordinate": {
+            "x": 0,
+            "y": 0
+          },
+          "displayOptions": "Single"
+        },
+        "options": [
+          {"isOpaque": false},
+          {
+            "layout": {
+              "name": "BorderLayout"
+            }
+          }
+        ],
+        "borderLayoutConstraints": "SOUTH",
+        "components": [ ]
+      }
+    ]
+  }
+}

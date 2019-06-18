@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>dyga-engine</artifactId>
+        <groupId>com.dyga-entertainment.dyga-engine</groupId>
+        <version>0.2</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>examples</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>com.dyga-entertainment.dyga-engine</groupId>
+            <artifactId>dyga-ui</artifactId>
+            <version>0.2</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
+    <!-- This works since we home/.m2/repository is the default local repository -->
+    <!-- This will be uploaded afterward to someting else that I will have to include the link (since it's not Meven Central Repo)! -->
+    <!--
+    <dependencies>
+        <dependency>
+            <groupId>com.dyga-entertainment.dyga-engine</groupId>
+            <artifactId>dyga-ui</artifactId>
+            <version>0.2</version>
+        </dependency>
+    </dependencies>
+    -->
+
+</project>

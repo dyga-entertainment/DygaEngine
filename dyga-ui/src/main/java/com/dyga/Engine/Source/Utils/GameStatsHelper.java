@@ -1,5 +1,7 @@
 package com.dyga.Engine.Source.Utils;
 
+import com.dyga.Engine.Source.Main.Game;
+
 import java.text.DecimalFormat;
 
 import static com.dyga.Engine.Source.Utils.Math.Converter.convertNanosecToSeconds;
@@ -28,6 +30,9 @@ public class GameStatsHelper {
     private static double fpsStore[];
     private static double upsStore[];
 
+    private static long gameStartTime;
+    private static long prevStatsTimeNs;
+
     // Stats variables
     private static int timeSpentInGameSec = 0;
     private static double averageFPS = 0.0;
@@ -44,6 +49,9 @@ public class GameStatsHelper {
             fpsStore[i] = 0.0;
             upsStore[i] = 0.0;
         }
+
+        gameStartTime = java.lang.System.nanoTime();
+        prevStatsTimeNs = gameStartTime;
     }
 
     /* The statistics:
@@ -61,9 +69,7 @@ public class GameStatsHelper {
          the average FPS & UPS over the last NUM_FPSs intervals.
 
      The data is collected every MAX_STATS_INTERVAL  (1 sec). */
-    public static long storeStats(long frameTimeNs, long gameStartTime, long prevStatsTimeNs) {
-        long result = prevStatsTimeNs;
-
+    public static void storeStats(long frameTimeNs) {
         // increment the number of frame
         frameCount++;
 
@@ -130,10 +136,9 @@ public class GameStatsHelper {
 
             // Cache the value for next stats
             framesSkipped = 0;
-            result = timeNowNs;
             statsIntervalNs = 0L;   // reset
+            prevStatsTimeNs = java.lang.System.nanoTime();
         }
-        return result;
     }
 
     public int getTimeSpentInGameSec() {

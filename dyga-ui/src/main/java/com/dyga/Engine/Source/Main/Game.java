@@ -62,16 +62,6 @@ public class Game {
     // no. of frames that can be skipped in any one animation loop
     // i.e the games state is updated but not rendered
 
-    private static long prevStatsTimeNs;
-    // used for gathering statistics
-    private static long gameStartTime;
-
-    private static double fpsStore[];
-    private static double averageFPS = 0.0;
-
-    private static double upsStore[];
-    private static double averageUPS = 0.0;
-
     /**
      *
      * @param gameName
@@ -90,7 +80,6 @@ public class Game {
         System.out.println("fps: " + targetFPS + "; period: " + (long) 1000.0/targetFPS + " ms");
 
         gameStatsHelper = new GameStatsHelper();
-        gameStatsHelper.initStatsVariables();
 
         // Create game components
         // TODO here ??
@@ -142,7 +131,7 @@ public class Game {
                     noDelays = 0;
                 }
             }
-            Game.prevStatsTimeNs = storeStats(Game.frameTimeNs, Game.gameStartTime, Game.prevStatsTimeNs);
+            storeStats(Game.frameTimeNs);
         }
         System.exit(0);
     }
@@ -198,8 +187,8 @@ public class Game {
         Game.mainControler.addView(mainView);
 
         // Only for stats
-        Game.gameStartTime = java.lang.System.nanoTime();
-        Game.prevStatsTimeNs = gameStartTime;
+        gameStatsHelper.initStatsVariables();
+
     }
 
     /** Method useful in order to help the programmer script his desire behavior */

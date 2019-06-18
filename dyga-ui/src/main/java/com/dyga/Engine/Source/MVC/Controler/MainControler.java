@@ -17,7 +17,7 @@ public class MainControler implements KeyListener, MouseListener, ActionListener
 	private MainView mainView;
 	private MainModel mainModel;
 
-	private static String INPUT_PATH = "Inputs.ButtonsCallback"; // Temporary
+	private static String INPUT_PATH = "Scripts.Inputs.ButtonsCallback"; // Temporary
 
 	public static Dictionary<String, Tuple<Class, Method>> controlerMethods;
 
@@ -114,7 +114,7 @@ public class MainControler implements KeyListener, MouseListener, ActionListener
 
 		// TODO REVIEW THAT
 		// Notify the view that it needs to repaint.
-		this.mainView.paint(0,0);
+		//this.mainView.paint(0,0);
 
 
 		// OLD VERSION
@@ -165,7 +165,7 @@ public class MainControler implements KeyListener, MouseListener, ActionListener
 
 		// TODO REVIEW THAT
 		// Notify the view
-		this.mainView.paint(0, 0);
+		//this.mainView.paint(0, 0);
 	}
 
 	public void returnLastView() {
@@ -176,7 +176,7 @@ public class MainControler implements KeyListener, MouseListener, ActionListener
 
 		// TODO REVIEW THAT
 		// Notify the view
-		this.mainView.paint(0,0);
+		//this.mainView.paint(0,0);
 	}
 
 

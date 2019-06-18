@@ -1,0 +1,52 @@
+{
+  "name": "Jungle 1.1",
+  "world": 1,
+  "level": 1,
+  "background": {
+    "imageUrl": "Sprites/UI/Backgrounds/background_menu.png",
+    "startingCoordinate": {
+      "x": 0,
+      "y": 0
+    },
+    "displayOptions": "Single"
+  },
+  "music": {
+    "path": "url/song.wav",
+    "pitch": 1.0
+  },
+  "entities": [
+    {
+      "name": "MadMonk",
+      "spawnPoint": {
+        "x": 10,
+        "y": 20
+      }
+    },
+    {
+      "name": "MadMonk",
+      "spawnPoint": {
+        "x": 30,
+        "y": 20
+      }
+    },
+    {
+      "name": "HeroFry",
+      "spawnPoint": {
+        "x": 1,
+        "y": 1
+      }
+    }
+  ],
+  "items": [
+    {
+      "name": "gold saphir",
+      "spawnPoint": {
+        "x": 1,
+        "y": 5
+      }
+    }
+  ],
+  "environment": {
+
+  }
+}
