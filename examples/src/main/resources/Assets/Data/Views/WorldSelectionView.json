@@ -1,0 +1,376 @@
+{
+  "name": "WorldSelectionView",
+  "view": {
+    "type": "Panel",
+    "background": {
+      "imageUrl": "Sprites/UI/Backgrounds/background_jungle.png",
+      "startingCoordinate": {
+        "x": 0,
+        "y": 0
+      },
+      "displayOptions": "Single"
+    },
+    "options": [
+      {"isOpaque": true},
+      {
+        "layout": {
+          "name": "BorderLayout"
+        }
+      }
+    ],
+    "components": [
+      {
+        "type": "Panel",
+        "options": [
+          {"isOpaque": false}
+        ],
+        "borderLayoutConstraints": "NORTH",
+        "components": [
+          {
+            "type": "Label",
+            "font": {
+              "name": "Dialog",
+              "size": 32,
+              "style": "Bold",
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            "options": [
+              {"text": "Veuillez selectionner votre monde et votre niveau"},
+              {
+                "border": {
+                  "thickness": 10,
+                  "color": "Black"
+                }
+              },
+              {"color" : "Black"},
+              {"isEnable": true},
+              {"PreferredSize": {
+                "width": 150,
+                "height": 50
+              }}
+            ]
+          }
+        ]
+      },
+      {
+        "type": "Panel",
+        "options": [
+          {"isOpaque": false},
+          {
+            "layout": {
+              "name": "BorderLayout"
+            }
+          }
+        ],
+        "borderLayoutConstraints": "CENTER",
+        "components": [
+          {
+            "type": "Panel",
+            "options": [
+              {"isOpaque": false},
+              {
+                "layout": {
+                  "name": "GridLayout",
+                  "rows": 1,
+                  "cols": 6,
+                  "hgap": 0,
+                  "vgap": 0
+                }
+              }
+            ],
+            "borderLayoutConstraints": "SOUTH",
+            "components": [
+              {
+                "type": "Button",
+                "background": {
+                  "imageUrl": "Sprites/UI/Backgrounds/background_jungle.png",
+                  "startingCoordinate": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "PreferredSize": {
+                    "width": 100,
+                    "height": 250
+                  },
+                  "displayOptions": "Plain"
+                },
+                "listeners": [
+                  {
+                    "name": "mouse",
+                    "methods": [
+                      {
+                        "name": "onPressed",
+                        "functionName": "Inputs.ButtonsCallback.changeWorld",
+                        "imageUrl": "Sprites/UI/Backgrounds/background_jungle.png",
+                        "songUrl": "todo.wav"
+                      }
+                    ]
+                  }
+                ],
+                "options": [
+                  {"text": "Back"},
+                  {"isEnable": true},
+                  {"isOpaque": false},
+                  {"PreferredSize": {
+                    "width": 150,
+                    "height": 50
+                  }}
+                ]
+              },
+              {
+                "type": "Button",
+                "background": {
+                  "imageUrl": "Sprites/UI/Backgrounds/background_snow.png",
+                  "startingCoordinate": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "PreferredSize": {
+                    "width": 1000,
+                    "height": 2
+                  },
+                  "displayOptions": "Tiled"
+                },
+                "listeners": [
+                  {
+                    "name": "mouse",
+                    "methods": [
+                      {
+                        "name": "onPressed",
+                        "functionName": "Inputs.ButtonsCallback.changeWorld",
+                        "imageUrl": "Sprites/UI/Backgrounds/background_snow.png",
+                        "songUrl": "todo.wav"
+                      }
+                    ]
+                  }
+                ],
+                "options": [
+                  {"text": "Back"},
+                  {"isEnable": true},
+                  {"isOpaque": false},
+                  {"PreferredSize": {
+                    "width": 0,
+                    "height": 100
+                  }}
+                ]
+              },
+              {
+                "type": "Button",
+                "background": {
+                  "imageUrl": "Sprites/UI/Backgrounds/background_fire.png",
+                  "startingCoordinate": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "PreferredSize": {
+                    "width": 1000,
+                    "height": 2
+                  },
+                  "displayOptions": "Tiled"
+                },
+                "listeners": [
+                  {
+                    "name": "mouse",
+                    "methods": [
+                      {
+                        "name": "onPressed",
+                        "functionName": "Inputs.ButtonsCallback.changeWorld",
+                        "imageUrl": "Sprites/UI/Backgrounds/background_fire.png",
+                        "songUrl": "todo.wav"
+                      }
+                    ]
+                  }
+                ],
+                "options": [
+                  {"text": "Back"},
+                  {"isEnable": true},
+                  {"isOpaque": false},
+                  {"PreferredSize": {
+                    "width": 0,
+                    "height": 100
+                  }}
+                ]
+              },
+              {
+                "type": "Button",
+                "background": {
+                  "imageUrl": "Sprites/UI/Backgrounds/background_hell.png",
+                  "startingCoordinate": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "PreferredSize": {
+                    "width": 1000,
+                    "height": 2
+                  },
+                  "displayOptions": "Tiled"
+                },
+                "listeners": [
+                  {
+                    "name": "mouse",
+                    "methods": [
+                      {
+                        "name": "onPressed",
+                        "functionName": "Inputs.ButtonsCallback.changeWorld",
+                        "imageUrl": "Sprites/UI/Backgrounds/background_hell.png",
+                        "songUrl": "todo.wav"
+                      }
+                    ]
+                  }
+                ],
+                "options": [
+                  {"text": "Back"},
+                  {"isEnable": true},
+                  {"isOpaque": false},
+                  {"PreferredSize": {
+                    "width": 0,
+                    "height": 100
+                  }}
+                ]
+              },
+              {
+                "type": "Button",
+                "background": {
+                  "imageUrl": "Sprites/UI/Backgrounds/background_custom.png",
+                  "startingCoordinate": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "PreferredSize": {
+                    "width": 1000,
+                    "height": 2
+                  },
+                  "displayOptions": "Tiled"
+                },
+                "listeners": [
+                  {
+                    "name": "mouse",
+                    "methods": [
+                      {
+                        "name": "onPressed",
+                        "functionName": "Inputs.ButtonsCallback.changeWorld",
+                        "imageUrl": "Sprites/UI/Backgrounds/background_custom.png",
+                        "songUrl": "todo.wav"
+                      }
+                    ]
+                  }
+                ],
+                "options": [
+                  {"text": "Back"},
+                  {"isEnable": true},
+                  {"isOpaque": false},
+                  {"PreferredSize": {
+                    "width": 0,
+                    "height": 100
+                  }}
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "Panel",
+        "background": {
+          "imageUrl": "Sprites/UI/bandeau_menu.png",
+          "startingCoordinate": {
+            "x": 0,
+            "y": 0
+          },
+          "PreferredSize": {
+            "width": 400,
+            "height": 250
+          },
+          "displayOptions": "Tiled"
+        },
+        "options": [
+          {"isOpaque": false},
+          {
+            "layout": {
+              "name": "BorderLayout"
+            }
+          }
+        ],
+        "borderLayoutConstraints": "SOUTH",
+        "components": [
+          {
+            "type": "Button",
+            "background": {
+              "imageUrl": "Sprites/UI/Buttons/bouton_retour1.png",
+              "displayOptions": "Tiled",
+              "startingCoordinate": {
+                "x": 0,
+                "y": 0
+              },
+              "PreferredSize": {
+                "width": 400,
+                "height": 250
+              },
+              "displayOptions": "Scale"
+            },
+            "listeners": [
+              {
+                "name": "mouse",
+                "methods": [
+                  {
+                    "name": "onPressed",
+                    "functionName": "Inputs.ButtonsCallback.back",
+                    "imageUrl": "Sprites/UI/Buttons/bouton_retour2.png",
+                    "songUrl": "todo.wav"
+                  }
+                ]
+              }
+            ],
+            "options": [
+              {"text": "Back"},
+              {"isEnable": true},
+              {"PreferredSize": {
+                "width": 150,
+                "height": 50
+              }}
+            ],
+            "borderLayoutConstraints": "WEST"
+          },
+          {
+            "type": "Button",
+            "background": {
+              "imageUrl": "Sprites/UI/Buttons/bouton_valider1.png",
+              "startingCoordinate": {
+                "x": 0,
+                "y": 0
+              },
+              "displayOptions": "Scale"
+            },
+            "listeners": [
+              {
+                "name": "mouse",
+                "methods": [
+                  {
+                    "name": "onPressed",
+                    "functionName": "Inputs.ButtonsCallback.changeView",
+                    "imageUrl": "Sprites/UI/Buttons/bouton_valider2.png",
+                    "songUrl": "todo.wav"
+                  }
+                ]
+              }
+            ],
+            "options": [
+              {"text": "Accept"},
+              {"isEnable": true},
+              {"PreferredSize": {
+                "width": 150,
+                "height": 50
+              }},
+              {"nextView": "LevelSelectionView"}
+            ],
+            "borderLayoutConstraints": "EAST"
+          }
+        ]
+      }
+    ]
+  }
+}

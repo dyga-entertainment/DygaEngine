@@ -1,0 +1,60 @@
+{
+  "name": "Doge",
+  "sprite": "Sprites/UI/Backgrounds/background_custom.png",
+  "stats": {
+    "maxHealth": 100,
+    "maxSpeed": 1
+  },
+  "spawnPoint": [
+    {
+      "x": 5,
+      "y": 5
+    }
+  ],
+  "animations": [
+    {
+      "name": "Idle",
+      "Frame": [
+        {
+          "Frame": 1,
+          "sprite": "idle1"
+        }
+      ]
+    },
+    {
+      "name": "Walk",
+      "Frame": [
+        {
+          "Frame": 1,
+          "sprite": "walk1"
+        },
+        {
+          "Frame": 1,
+          "sprite": "walk2"
+        },
+        {
+          "Frame": 1,
+          "sprite": "walk2"
+        }
+      ]
+    },
+    {
+      "name": "Fall",
+      "Frame": [
+        {
+          "Frame": 1,
+          "sprite": "Fall1"
+        },
+        {
+          "Frame": 1,
+          "sprite": "Fall2"
+        }
+      ]
+    }
+  ],
+  "inventory": [
+    {
+      "name": "small bombs"
+    }
+  ]
+}
