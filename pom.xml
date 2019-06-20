@@ -11,6 +11,7 @@
         <module>dyga-ui</module>
         <module>dyga-core</module>
         <module>examples</module>
+        <module>legacy</module>
     </modules>
 
     <groupId>com.dyga-entertainment.dyga-engine</groupId>
@@ -75,6 +76,7 @@
                 <module>dyga-core</module>
                 <module>dyga-ui</module>
                 <module>examples</module>
+                <module>legacy</module>
             </modules>
             <activation>
                 <activeByDefault>true</activeByDefault>

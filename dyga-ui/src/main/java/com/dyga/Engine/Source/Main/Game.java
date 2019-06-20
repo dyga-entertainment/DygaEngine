@@ -149,7 +149,7 @@ public class Game {
     }
 
     private static void gameUpdate() {
-        // TODO
+        // Update the scene
     }
 
     private static void gameRender() {
@@ -264,7 +264,7 @@ public class Game {
         mainModel.loadGame(gameEntities);
         //mainView.paint(); not anymore !
 
-        // THe game loop should already be trigger
+        // The game loop should already be trigger
         //startGameLoop();
     }
 
