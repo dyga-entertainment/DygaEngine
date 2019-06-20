@@ -2,162 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1965d4b1-93b3-42f9-ba48-2fa129f30f22" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/Data/audio/SoundSystem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/Data/audio/TestAudio.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/Data/audio/ThreadPiste.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/Data/levels/MondeDemonstration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/Data/levels/MondeJungle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/Data/levels/MondeSnow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/Data/levels/ProfilData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/GameCode/Test2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/Actions/PlayerInput.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/Actions/ThreadAnimation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/Actions/ThreadCreuser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/Actions/Timer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/GameModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/MainModelLegacy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/MenuModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/bloc/Bloc.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/bloc/BlocBarreTraversee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/bloc/BlocBrique.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/bloc/BlocEchelle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/bloc/BlocGlu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/bloc/BlocPortailFinNiveau.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/bloc/BlocTerre.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/bloc/C.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/item/Gadget.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/item/Gaz.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/item/GrosseBombe.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/item/Item.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/item/Lingot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/item/PetiteBombe.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/item/Pioche.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/item/PotDeGlu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/jeu/Carte.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/jeu/Coordonnees.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/jeu/Joueur.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/jeu/Monde.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/jeu/Niveau.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/jeu/Positionnable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/jeu/Sprite.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/personnage/Heros.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/personnage/IAMadMonk.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/personnage/IANaive.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/personnage/Joueur.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/personnage/MadMonk.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/Model/personnage/Personnage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/Bandeau.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/Buttons/ContextTransitionButton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/Buttons/StandardButton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/FenetrePrincipale.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/GameViews/GameContentView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/GameViews/GameView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/GameViews/HeadUpDisplay.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/IHM2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/IHM6.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/IHM9.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/IHMB2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/IHMB3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/IHMB4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/IHMB5.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/IHMB6.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/IHMB7.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/IHMB8.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/IHMB9.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/JPButton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/MenuViews/CreditView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/MenuViews/HomeMenuView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/MenuViews/LevelSelectionView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/MenuViews/LoadingView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/MenuViews/ProfilsView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/MenuViews/SettingsView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/MenuViews/View.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/MenuViews/ViewManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/MVC/View/MenuViews/WorldSelectionView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/Utils/exceptions/AnimationNonReconnueException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/Utils/exceptions/BlocNonCreusableException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/Utils/exceptions/CasePriseException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/Utils/exceptions/ErreurGadgetException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/Utils/exceptions/InventaireVideException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/java/Utils/helper/ImagesMadMonk.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/tests/NiveauAxel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/tests/NiveauDamien.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/tests/NiveauDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/tests/NiveauGregoire.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/tests/NiveauYann.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dyga-core/src/main/legacy/javaOld/tests/TestModeleJeu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/java/Worm/WormUFS/Obstacles.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/java/Worm/WormUFS/Worm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/java/Worm/WormUFS/WormChase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/java/Worm/WormUFS/WormPanel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/java/Worm/readmeForCh3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/java/Worm/readmeForCh4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/java/ch6Code/ImagesTests/ImageSFXs.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/java/ch6Code/ImagesTests/ImagesLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/java/ch6Code/ImagesTests/ImagesPlayer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/java/ch6Code/ImagesTests/ImagesPlayerWatcher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/java/ch6Code/ImagesTests/ImagesTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/java/ch6Code/ImagesTests/mainClass.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/java/ch6Code/ImagesTests/makeJar.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/java/ch6Code/ImagesTests/readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/java/ch6Code/ImagesTests/runIT.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/atomic.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/balls.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/basn6a08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/basn6a16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/bee.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/cars.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/cats.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/cheese.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/eyeChart.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/figure0.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/figure1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/figure2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/figure3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/figure4.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/figure5.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/figure6.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/figure7.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/figure8.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/house.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/imsInfo.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/kaboom.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/left.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/numbers0.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/numbers1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/numbers2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/numbers3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/numbers4.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/numbers5.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/owl.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/pumpkin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/right.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/scooter.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/still.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/ufo.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/main/resources/Images/up.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/test/WormAFS/Obstacles.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/test/WormAFS/Worm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/test/WormAFS/WormChase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/test/WormAFS/WormPanel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/test/WormApplet/Obstacles.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/test/WormApplet/Worm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/test/WormApplet/WormChaseApplet.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/test/WormApplet/WormChaseApplet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/test/WormApplet/WormPanel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/test/WormFSEM/Obstacles.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/test/WormFSEM/Worm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/test/WormFSEM/WormChase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/test/WormP/Obstacles.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/test/WormP/Worm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/test/WormP/WormChase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/test/WormP/WormPanel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/test/WormPMillis/Obstacles.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/test/WormPMillis/Worm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/test/WormPMillis/WormChase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/legacy/src/test/WormPMillis/WormPanel.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -179,18 +27,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/legacy/src/main/java/ch6Code/ImagesTests/ImagesTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4146">
-              <caret line="115" column="37" selection-start-line="115" selection-start-column="37" selection-end-line="115" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/Main/Game.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -215,6 +51,15 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="77" column="41" selection-start-line="77" selection-start-column="41" selection-end-line="77" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/View/MainView.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -229,7 +74,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/View/Menu/Component/ViewPanel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
@@ -266,23 +111,6 @@
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/legacy/src/main/java/ch6Code/ImagesTests/ImagesLoader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2023">
-              <caret line="119" column="53" selection-start-line="119" selection-start-column="53" selection-end-line="119" selection-end-column="53" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/legacy/src/main/java/ch6Code/ImagesTests/readme.txt">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -374,12 +202,12 @@
         <option value="$PROJECT_DIR$/legacy/src/main/java/ch6Code/ImagesTests/ImagesPlayerWatcher.java" />
         <option value="$PROJECT_DIR$/legacy/src/main/java/ch6Code/ImagesTests/ImagesTests.java" />
         <option value="$PROJECT_DIR$/legacy/pom.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/legacy/src/main/java/ch6Code/ImagesTests/ImagesLoader.java" />
         <option value="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/Controler/MainControler.java" />
         <option value="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/Main/Game.java" />
         <option value="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/View/MainView.java" />
         <option value="$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/View/Menu/Component/ViewPanel.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -705,12 +533,12 @@
       <workItem from="1560813130950" duration="3555000" />
       <workItem from="1560895941641" duration="337000" />
       <workItem from="1560896339907" duration="8056000" />
-      <workItem from="1560982895310" duration="4119000" />
+      <workItem from="1560982895310" duration="5052000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129253000" />
+    <option name="totallyTimeSpent" value="130186000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1107,13 +935,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
-          <caret line="78" column="30" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -1234,6 +1055,13 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="77" column="41" selection-start-line="77" selection-start-column="41" selection-end-line="77" selection-end-column="41" />
         </state>
       </provider>
     </entry>
