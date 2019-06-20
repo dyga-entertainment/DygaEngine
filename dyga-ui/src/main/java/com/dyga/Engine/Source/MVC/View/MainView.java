@@ -23,6 +23,8 @@ import java.util.Dictionary;
 import java.util.Hashtable;
 import java.util.UUID;
 
+// <!> This should be call SCENE !
+
 /**
  * Source.Main Source.MVC.View - VIEW
  * Takes care of showing to the player the UI describe by the model.
@@ -39,8 +41,8 @@ public class MainView {
     private MainControler mainControler;
 
     private static JFrame gameFrame;
-    //private static ViewPanel activeGameView;
-    private static JPanel activeGamePanel;
+    private static ViewPanel activeGameView;
+    //private static JPanel activeGamePanel;
 
 
     /** This let the user get view component by using UUID from the model components */
@@ -81,30 +83,34 @@ public class MainView {
         this.mainModel = mainModel;
         this.mainControler = mainControler;
 
+        // Setup the container window
+        this.setupJFrame(activeRendering);
+
+        // Create the view
+        this.createFirstView();
+    }
+
+    private void setupJFrame(boolean activeRendering) {
         Toolkit tk = Toolkit.getDefaultToolkit();
         Dimension scrDim = tk.getScreenSize();
         WIDTH = scrDim.width;
         HEIGHT = scrDim.height;
 
         this.gameFrame.setSize(WIDTH, HEIGHT);
-
-        // Should be the controler jobs.. ?
-        this.gameFrame.addWindowListener(new WindowAdapter() {
-            public void windowOpened(WindowEvent e) {
-                gameFrame.requestFocus();
-            }
-        });
         this.gameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        // TODO ?
         this.gameFrame.setIgnoreRepaint(activeRendering);
+        this.gameFrame.setUndecorated(true);   // no borders or title bar
+        this.gameFrame.setIgnoreRepaint(true);  // turn off all paint events since doing active rendering
+        //gameFrame.pack();
+        this.gameFrame.setResizable(false);
+        this.gameFrame.setVisible(true);
     }
 
     public static void paintScreen() {
         Graphics graphics;
         try {
             // Retrieve the graphics from the current view
-            graphics = activeGamePanel.getGraphics();
+            graphics = activeGameView.getGraphics();
             if (graphics != null && screenImage != null) {
                 graphics.drawImage(screenImage, 0, 0, null);
             }
@@ -116,32 +122,11 @@ public class MainView {
 
 
     public void renderActiveView(double averageFPS, double averageUPS) {
-        if (this.screenImage == null){
-
-            // Temporary for now =========
-
-            // Create the view (this.activeGameView)
-            createFirstView();
-
-            //activeGamePanel = new JPanel();
-            //gameFrame.getContentPane().add(panel, "Center");
-
-            gameFrame.setUndecorated(true);   // no borders or title bar
-            gameFrame.setIgnoreRepaint(true);  // turn off all paint events since doing active rendering
-            //gameFrame.pack();
-            gameFrame.setResizable(false);
-            gameFrame.setVisible(true);
-
-            // Create the image from the view
-            this.screenImage = activeGamePanel.createImage(WIDTH, HEIGHT);
-
-            if (this.screenImage == null) {
-                System.out.println("dbImage is null");
-                return;
-            }
-            else {
-                dbg = screenImage.getGraphics();
-            }
+        if (this.screenImage == null) {
+            System.out.println("screenImage is null");
+            return;
+        } else {
+            this.dbg = this.screenImage.getGraphics();
         }
 
         // clear the background
@@ -166,6 +151,8 @@ public class MainView {
         drawButtons(dbg);
 
         this.dbg.setColor(Color.black);
+
+        this.activeGameView.render();
 
         // draw game elements: the obstacles and the worm
         // TODO
@@ -207,19 +194,30 @@ public class MainView {
     private void createFirstView() {
         System.out.println("[DEBUG] CREATE THE VIEW");
 
-        // Temporary for now =========
+        // Temporary for now
         gameFrame.getContentPane().removeAll();
         //gameFrame.getContentPane().validate();
 
         // Get the current modelView display thanks to the model
         ModelView menuView = this.mainModel.getCurrentView();
 
+        // Create the view based on the model
         System.out.println("[DEBUG] Build a new ViewPanel to display = " + menuView.getName());
         ModelPanel mainComponent = menuView.getModelComponent();
-        this.activeGamePanel = createView(mainComponent, this.mainControler);
+        this.activeGameView = createView(mainComponent, this.mainControler);
 
         // Add it at the end !
-        gameFrame.getContentPane().add(this.activeGamePanel);
+        gameFrame.getContentPane().add(this.activeGameView);
+
+        // Create the image from the view
+        this.screenImage = activeGameView.createImage(WIDTH, HEIGHT);
+
+        if (this.screenImage == null) {
+            System.out.println("screenImage is null");
+            return;
+        } else {
+            this.dbg = this.screenImage.getGraphics();
+        }
     }
 
     /**
@@ -399,5 +397,9 @@ public class MainView {
 
     public JComponent getViewComponentByUuid (UUID uuid) {
         return activeViewComponentsByModel.get(uuid);
+    }
+
+    public JFrame getFrame() {
+        return this.gameFrame;
     }
 }

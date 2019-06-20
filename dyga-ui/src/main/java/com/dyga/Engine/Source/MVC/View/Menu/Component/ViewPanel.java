@@ -80,6 +80,10 @@ public class ViewPanel extends JPanel {
         }*/
     }
 
+    public void render() {
+        // TODO : Render all the entities
+    }
+
     /*
     @Override
     public void paintComponent(Graphics g) {

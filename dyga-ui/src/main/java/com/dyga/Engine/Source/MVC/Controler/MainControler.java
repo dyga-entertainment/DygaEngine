@@ -11,7 +11,7 @@ import java.lang.reflect.Method;
 import java.util.*;
 import java.util.List;
 
-public class MainControler implements KeyListener, MouseListener, ActionListener  {
+public class MainControler extends WindowAdapter implements KeyListener, MouseListener, ActionListener {
 
 	// NEW META
 	private MainView mainView;
@@ -283,6 +283,11 @@ public class MainControler implements KeyListener, MouseListener, ActionListener
 		}
 		return classes;
 	}*/
+
+	@Override
+	public void windowOpened(WindowEvent e) {
+		this.mainView.getFrame().requestFocus();
+	}
 
 	/**####################### End Views Function #######################*/
 }
