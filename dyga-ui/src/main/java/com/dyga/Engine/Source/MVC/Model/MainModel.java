@@ -1,7 +1,9 @@
 package com.dyga.Engine.Source.MVC.Model;
 
+import com.dyga.Engine.Source.Entity.Entity;
 import com.dyga.Engine.Source.MVC.Model.Game.EntityModel;
 import com.dyga.Engine.Source.MVC.Model.Menu.ModelView;
+import com.dyga.Engine.Source.MVC.View.Game.Scene;
 import com.dyga.Engine.Source.Utils.JsonLoaders.EntityLoader;
 import com.dyga.Engine.Source.Utils.JsonLoaders.MenuLoader;
 import java.util.*;
@@ -14,7 +16,7 @@ import java.util.*;
 public class MainModel {
 
     ///=================
-    /// MENU Fields
+    /// UI MENU Fields
     ///=================
     /** Data structure holding all the possible views */
     private static Dictionary<String, ModelView> menuViews;
@@ -22,7 +24,6 @@ public class MainModel {
     private static ModelView activeModelView;
     /** Stack useful to comeback to previous views */
     private static Stack<String> lastVisitedViews;
-
     ///=================
     /// GAME Fields
     ///=================
@@ -33,19 +34,29 @@ public class MainModel {
     private static String currentWorldName;
     private static String currentLevelNumber;
 
+    // Useful ?
     private static Dictionary<String, List<EntityModel>> teams;
 
-    /**
-     * Basic contructor
-     */
+    ///=================
+    ///=================
+    /// NEW META
+    ///=================
+    ///=================
+    private Scene currentScene;
+    private List<Entity> entities;
+
     public MainModel() {
+        /*
         this.menuViews = new Hashtable<>();
         this.lastVisitedViews = new Stack<>();
 
-        this.teams = new Hashtable<>();
+        this.teams = new Hashtable<>();*/
+
+        this.entities = new ArrayList<>();
     }
 
     /**
+     * OLD
      * Init the model
      * Load, create and store all the UI views needed to navigate through the menu.
      * Assign the first one to the current active view.
@@ -72,6 +83,23 @@ public class MainModel {
             }
         }
     }
+
+    public void init(Scene scene) {
+        this.currentScene = scene;
+        entities = scene.getEntities();
+    }
+
+    public void update() {
+        // Call the update method on all the Entity
+        for(Entity entity : entities) {
+            entity.update();
+        }
+    }
+
+    public List<Entity> getModelEntities() {
+        return entities;
+    }
+
 
     /**
      * This method allow to retrieve the model of the current view display.
@@ -112,22 +140,6 @@ public class MainModel {
         currentLevelNumber = selectedLevelName;
     }
 
-    public void launchGame() {
-
-
-        InitGame();
-
-
-    }
-
-    // Maybe later ?
-    private void InitGame() {
-        this.loadedLevelsView = new Hashtable<>();
-        this.teams = new Hashtable<>();
-
-        // Add both team. So they can target each other.
-    }
-
     public void loadGame(String[] gameEntities) {
         System.out.println(currentWorldName);
         System.out.println(currentLevelNumber);
@@ -166,9 +178,5 @@ public class MainModel {
             }
         }
         return team1;
-    }
-
-    public List<EntityModel> getCurrentEntities() {
-        return this.teams.get("team1");
     }
 }

@@ -2,11 +2,16 @@ package com.dyga.Engine.Source.MVC.View.Menu.Component;
 
 import javax.swing.*;
 
+import com.dyga.Engine.Source.MVC.Model.Game.EntityModel;
+import com.dyga.Engine.Source.MVC.Model.Game.Structs.Stats;
 import com.dyga.Engine.Source.MVC.View.Game.EntityView;
 import com.dyga.Engine.Source.Main.Game;
 import com.dyga.Engine.Source.Utils.Images;
+import com.dyga.Engine.Source.Utils.Math.Position2D;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.util.ArrayList;
 
 public class ViewPanel extends JPanel {
 
@@ -21,6 +26,8 @@ public class ViewPanel extends JPanel {
     // the thread that performs the animation
     private Thread animator;
     // END TEST
+
+    private ArrayList<EntityView> entities;
 
     public ViewPanel(int width, int height) {
         this(width, height, "");
@@ -47,6 +54,15 @@ public class ViewPanel extends JPanel {
         requestFocus();
 
         // need end ==
+
+        entities = new ArrayList<>();
+
+        entities.add(
+            new EntityView(new EntityModel("toto", "Assets/Sprites/Enemy/Idle/mad_monk_stop_left.png", new Stats(), new Position2D(10, 2)))
+        );
+        entities.add(
+            new EntityView(new EntityModel("tata", "Assets/Sprites/Enemy/Idle/mad_monk_stop_right.png", new Stats(), new Position2D(20, 2)))
+        );
 
     }
 
@@ -80,8 +96,16 @@ public class ViewPanel extends JPanel {
         }*/
     }
 
-    public void render() {
+    // draw game elements: the obstacles and the worm
+    public void render(Graphics graphics) {
         // TODO : Render all the entities
+        // hard coded for now
+
+        for (EntityView entityView : entities) {
+            entityView.draw(graphics);
+        }
+        //obs.draw(dbg);
+        //fred.draw(dbg);
     }
 
     /*

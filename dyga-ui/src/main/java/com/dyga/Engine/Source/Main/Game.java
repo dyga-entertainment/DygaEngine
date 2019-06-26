@@ -7,9 +7,11 @@ import com.dyga.Engine.Source.MVC.Model.Menu.Component.ModelComponent;
 import com.dyga.Engine.Source.MVC.Model.Menu.Component.ModelPanel;
 import com.dyga.Engine.Source.MVC.Model.Menu.Enums.ModelLayout;
 import com.dyga.Engine.Source.MVC.Model.Menu.ModelView;
+import com.dyga.Engine.Source.MVC.View.Game.Scene;
 import com.dyga.Engine.Source.MVC.View.MainView;
 import com.dyga.Engine.Source.Utils.GameStatsHelper;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.UUID;
@@ -28,21 +30,33 @@ public class Game {
     // to other running threads.
     private static final int NO_DELAYS_PER_YIELD = 16;
 
-    /** Source.MVC.Model **/
+    /**
+     * Game Model.
+     * Will be in charge of representing the game state at every moment.
+     */
     private static MainModel mainModel;
-    /** Source.MVC.View **/
+
+    /**
+     * Game View
+     * Will be in charge of representing the display of the game at every moment.
+     */
     private static MainView mainView;
-    /** Source.MVC.Controler **/
+
+    /**
+     * Game Controller.
+     * Will be in charge of handling player input and notify the model and the view.
+     */
     private static MainControler mainControler;
 
-    /** GameLoop **/
-    //private static GameLoop gameLoop;
-
-    // Should be here ??
+    /**
+     * Storage of all the scenes (kind of Build settings)
+     * Those will be fed to the mainModel and the mainView when the player request those.
+     * So they can update them as usual.
+     */
+    private List<Scene> scenes;
 
     /** Others **/
     private static String gameName;
-    private static String[] views;
 
     /** Game **/
     private static String[] levels;
@@ -78,21 +92,26 @@ public class Game {
         Game.mainControler = new MainControler();
         Game.mainView = new MainView(gameName);
 
-        // a period of time each loop should take (in ms)
+        // a period of time each loop should take (in nanoseconds)
         this.frameTimeNs = convertMillisecToNanosec((long) 1000.0/targetFPS);
-
         System.out.println("fps: " + targetFPS + "; period: " + (long) 1000.0/targetFPS + " ms");
-
         this.gameStatsHelper = new GameStatsHelper();
 
         // Create game components
-        // TODO here ??
+        this.scenes = new ArrayList<>();
     }
 
-    public void run() {
-        // init the Game Engine
-        initGameEngine();
+    public void init() {
+        loadScene(0);
 
+        // Add the link Source.MVC.Controler -> Source.MVC.View to notify the view an input as been made and that, maybe the model changed.
+        Game.mainControler.addView(mainView);
+
+        // Only for stats
+        gameStatsHelper.initStatsVariables();
+    }
+
+    public void start() {
         // Start the game loop
         this.running = true;
         while (this.running) {
@@ -111,6 +130,23 @@ public class Game {
 
         // Exit the application
         System.exit(0);
+    }
+
+    private void loadScene(int index) {
+        // Init the modele of the game
+        Game.mainModel.init(this.scenes.get(index));
+
+        // Init the controller of the game
+        // Init the link Controller -> Source.MVC.Model in order to update the model if an input has been made.
+        Game.mainControler.init(mainModel);
+
+        // Init the view of the game with the windows (??)
+        // and the controller to be able to add him on buttons for example
+        Game.mainView.init(mainModel, mainControler, true);
+    }
+
+    private void loadScene(String sceneName) {
+
     }
 
     private void endFrameIteration(long timeBeforeUpdate, long timeAfterUpdate) {
@@ -149,12 +185,13 @@ public class Game {
     }
 
     private static void gameUpdate() {
-        // Update the scene
+        // Update the MainModel which will update the model representation of the scene
+        mainModel.update();
     }
 
     private static void gameRender() {
         // Passive rendering for now
-        mainView.renderActiveView(gameStatsHelper.getAverageFPS(), gameStatsHelper.getAverageUPS());
+        mainView.renderCurrentScene(gameStatsHelper.getAverageFPS(), gameStatsHelper.getAverageUPS());
     }
 
     private static void paintScreen() {
@@ -162,9 +199,11 @@ public class Game {
         mainView.paintScreen();
     }
 
+    /*
     public void addJsonViews(String[] views) {
         Game.views = views.clone();
     }
+    */
 
     public void addJsonLevels(String[] levels) {
         Game.levels = levels.clone();
@@ -172,31 +211,6 @@ public class Game {
 
     public void addJsonEntities(String[] gameEntities) {
         Game.gameEntities = gameEntities.clone();
-    }
-
-    public static void initGameEngine() {
-        // Init the modele of the game
-        Game.mainModel.init(views);
-
-        // Init the controller of the game
-        // Init the link Controller -> Source.MVC.Model in order to update the model if an input has been made.
-        Game.mainControler.init(mainModel);
-
-        // Add the link Source.MVC.View -> Controller when the user use inputs.
-        //this.addKeyListener(gameControler);
-        //this.addMouseListener(gameControler);
-        //this.requestFocus(); // Needed ?
-
-        // Init the view of the game with the windows (??)
-        // and the controller to be able to add him on buttons for example
-        Game.mainView.init(mainModel, mainControler, true);
-
-        // Add the link Source.MVC.Controler -> Source.MVC.View to notify the view an input as been made and that, maybe the model changed.
-        Game.mainControler.addView(mainView);
-
-        // Only for stats
-        gameStatsHelper.initStatsVariables();
-
     }
 
     /** Method useful in order to help the programmer script his desire behavior */
@@ -256,10 +270,6 @@ public class Game {
         return mainView.getViewComponentByUuid(uuid);
     }
 
-    public static void forceViewRepaint() {
-        //mainView.paint();  // not anymore !
-    }
-
     public static void launchGame() {
         mainModel.loadGame(gameEntities);
         //mainView.paint(); not anymore !
@@ -268,4 +278,17 @@ public class Game {
         //startGameLoop();
     }
 
+    /**
+     *
+     * @param scene
+     * @return
+     */
+    public int addScene(Scene scene) {
+        this.scenes.add(scene);
+
+        //this.mainModel.addScene(sceneName);
+        //this.mainView.addScene(sceneName);
+
+        return 0;
+    }
 }
