@@ -43,6 +43,9 @@ deploy:
   #    repo: dyga-entertainment/DygaEngine
   #    tags: true
 
+after_success:
+  - mvn clean test jacoco:report coveralls:report -DrepoToken=$COVERALLS_TOKEN
+
 notifications:
   email:
     recipients:
