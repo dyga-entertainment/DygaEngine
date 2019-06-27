@@ -1,15 +1,21 @@
 import com.dyga.Engine.Source.Main.Game;
+import com.dyga.Engine.Source.Utils.Images;
+import com.dyga.Engine.Source.Utils.Tuple;
 import org.junit.Test;
+
+import java.awt.image.BufferedImage;
 
 import static junit.framework.Assert.*;
 
 public class TestGame {
 
     @Test
-    public void testGameStatesInit() {
-        Game game = new Game("testGame", 60, true);
-        assertFalse(game.running);
-        assertFalse(game.gameOver);
+    public void testTuple() {
+        Tuple tuple = new Tuple(5, 5);
+
+        assertNotNull(tuple);
+        assertEquals(tuple.first, 5);
+        assertEquals(tuple.second, 5);
     }
 
 }
