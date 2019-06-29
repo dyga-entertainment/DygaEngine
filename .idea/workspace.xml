@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1965d4b1-93b3-42f9-ba48-2fa129f30f22" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,11 +38,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="497">
               <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="531">
+              <caret line="241" column="71" selection-start-line="241" selection-start-column="71" selection-end-line="241" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="55" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -209,10 +229,10 @@
         <option value="$PROJECT_DIR$/.coveralls.yml" />
         <option value="$PROJECT_DIR$/.config.yml" />
         <option value="$PROJECT_DIR$/dyga-ui/src/test/java/TestGame.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/.circleci/.config.yml" />
         <option value="$PROJECT_DIR$/.circleci/config.yml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -264,6 +284,16 @@
             <path>
               <item name="dyga-engine" type="b2602c69:ProjectViewProjectNode" />
               <item name="dyga-engine" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dyga-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dyga-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="dyga-ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dyga-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dyga-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -392,7 +422,7 @@
       <workItem from="1561589163038" duration="7360000" />
       <workItem from="1561685816382" duration="2741000" />
       <workItem from="1561772686570" duration="4942000" />
-      <workItem from="1561832921392" duration="2661000" />
+      <workItem from="1561832921392" duration="3309000" />
     </task>
     <servers />
   </component>
@@ -411,7 +441,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186173000" />
+    <option name="totallyTimeSpent" value="186821000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -600,14 +630,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/legacy/src/main/java/ch6Code/ImagesTests/ImagesTests.java" />
-    <entry file="jar://D:/Program Files (x86)/Java/lib/src.zip!/java.desktop/java/awt/event/WindowAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="54" column="35" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dyga-ui/src/main/java/com/dyga/Engine/Source/MVC/Model/Menu/ModelView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -914,13 +936,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/.coveralls.yml" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1309">
-          <caret line="116" column="18" selection-start-line="116" selection-start-column="18" selection-end-line="116" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dyga-ui/target/surefire-reports/TestGame.txt" />
     <entry file="file://$PROJECT_DIR$/dyga-ui/target/surefire-reports/TEST-TestGame.xml" />
     <entry file="file://$PROJECT_DIR$/dyga-ui/src/test/java/TestGame.java">
@@ -1001,6 +1016,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="497">
           <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dyga-ui/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1462">
+          <caret line="86" column="21" lean-forward="true" selection-start-line="86" selection-start-column="21" selection-end-line="86" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="55" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="241" column="71" selection-start-line="241" selection-start-column="71" selection-end-line="241" selection-end-column="71" />
         </state>
       </provider>
     </entry>
