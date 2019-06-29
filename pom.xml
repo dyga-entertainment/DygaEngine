@@ -234,6 +234,7 @@
                 </dependencies>
             </plugin>
             <!-- No matters what, exclude examples when getting dependencies -->
+            <!--
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
@@ -242,6 +243,7 @@
                     <excludeGroupIds>com.dyga-entertainment.dyga-engine</excludeGroupIds>
                 </configuration>
             </plugin>
+            -->
         </plugins>
     </build>
 </project>

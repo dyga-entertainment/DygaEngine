@@ -16,7 +16,7 @@ jobs:       # a collection of steps
       # Run maven commands
       - run:
           name: getDependencies
-          command: mvn dependency:go-offline  # gets the project dependencies
+          command: mvn dependency:go-offline -DexcludeGroupId=com.dyga-entertainment.dyga-engine  # gets the project dependencies
       # saves the project dependencies
       - save_cache:
           key: dyga-engine-{{ checksum "pom.xml" }}

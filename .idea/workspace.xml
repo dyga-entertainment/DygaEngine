@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1965d4b1-93b3-42f9-ba48-2fa129f30f22" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
@@ -41,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
+            <state relative-caret-position="204">
+              <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -50,8 +50,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="531">
-              <caret line="241" column="71" selection-start-line="241" selection-start-column="71" selection-end-line="241" selection-end-column="71" />
+            <state relative-caret-position="264">
+              <caret line="245" column="15" selection-start-line="245" selection-start-column="15" selection-end-line="245" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -144,9 +144,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>NUM_FPS</find>
-      <find>frameCount</find>
-      <find>timeSpentInGameSec</find>
       <find>targetFPS</find>
       <find>bintray</find>
       <find>properties</find>
@@ -174,6 +171,9 @@
       <find>imageHeight</find>
       <find>pro</find>
       <find>maven-compiler-plugin</find>
+      <find>resolve-plugins @ examples</find>
+      <find>dyga-ui-</find>
+      <find>dyga-ui</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -284,6 +284,11 @@
             <path>
               <item name="dyga-engine" type="b2602c69:ProjectViewProjectNode" />
               <item name="dyga-engine" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dyga-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dyga-engine" type="462c0819:PsiDirectoryNode" />
+              <item name=".circleci" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dyga-engine" type="b2602c69:ProjectViewProjectNode" />
@@ -422,7 +427,7 @@
       <workItem from="1561589163038" duration="7360000" />
       <workItem from="1561685816382" duration="2741000" />
       <workItem from="1561772686570" duration="4942000" />
-      <workItem from="1561832921392" duration="3309000" />
+      <workItem from="1561832921392" duration="5465000" />
     </task>
     <servers />
   </component>
@@ -441,7 +446,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186821000" />
+    <option name="totallyTimeSpent" value="188977000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -465,7 +470,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.50097847" side_tool="true" weight="0.20112517" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3297587" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.44369972" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.40348527" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.46246648" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1012,13 +1017,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dyga-ui/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1462">
@@ -1033,10 +1031,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="241" column="71" selection-start-line="241" selection-start-column="71" selection-end-line="241" selection-end-column="71" />
+        <state relative-caret-position="264">
+          <caret line="245" column="15" selection-start-line="245" selection-start-column="15" selection-end-line="245" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -1117,6 +1122,12 @@
   </component>
   <component name="mavenExecuteGoalHistory">
     <option value="$PROJECT_DIR$" />
+    <option value="dependency:go-offline -DexcludeGroupId=com.dyga-entertainment.dyga-engine" />
+    <option value="dependency:go-offline -DexcludeGroupIds" />
+    <option value="dependency:go-offline@abc" />
+    <option value="gggg:go-offline@abc" />
+    <option value="dependency:go-offline" />
+    <option value="dependency:go-offline@my-execution" />
     <option value="bash &lt;(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN" />
     <option value="clean test jacoco:report coveralls:report -DrepoToken=tTOZOp3aWbteiPHIuvFlkI1fXDDIH5632" />
     <option value="clean test jacoco:report coveralls:report" />
