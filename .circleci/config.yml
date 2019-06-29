@@ -28,10 +28,12 @@ jobs:       # a collection of steps
           command: mvn package
       # uploads the test metadata from the `target/surefire-reports` directory so that it can show up in the CircleCI dashboard.
       - store_test_results:
-          path: target/surefire-reports   # Upload test results for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
+          paths:
+            - dyga-ui/target/surefire-reports   # Upload test results for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
+            - dyga-core/target/surefire-reports
       # store the uberjar as an artifact
       - store_artifacts:
-          path: target/dyga-core-0.2.jar    # Upload test summary for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
+          paths:
+            - dyga-core/target/dyga-core-0.2.jar    # Upload test summary for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
+            - dyga-ui/target/dyga-ui-0.2.jar
           # See https://circleci.com/docs/2.0/deployment-integrations/ for deploy examples
-      - store_artifacts:
-          path: target/dyga-ui-0.2.jar
