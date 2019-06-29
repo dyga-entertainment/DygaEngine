@@ -16,7 +16,7 @@ jobs:       # a collection of steps
       # Run maven commands
       - run:
           name: getDependencies
-          command: mvn dependency:go-offline -Pproduction --projects dyga-ui,dyga-core --also-make install  # gets the project dependencies
+          command: mvn dependency:go-offline --projects dyga-ui,dyga-core  # gets the project dependencies
       # saves the project dependencies
       - save_cache:
           key: dyga-engine-{{ checksum "pom.xml" }}
