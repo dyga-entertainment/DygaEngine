@@ -8,30 +8,32 @@ jobs:       # a collection of steps
       - image: circleci/openjdk:8-jdk-browsers   # ...with this image as the primary container; this is where all `steps` will run
 
     steps:
-
-      - checkout  # check out source code to working directory
-
-      - restore_cache:  # restore the saved cache after the first run or if `pom.xml` has changed
-          # Read about caching dependencies: https://circleci.com/docs/2.0/caching/
+      # check out source code to working directory
+      - checkout
+      # restore the saved cache after the first run or if `pom.xml` has changed
+      - restore_cache:
+          key: dyga-engine-{{ checksum "pom.xml" }} # Read about caching dependencies: https://circleci.com/docs/2.0/caching/
+      # Run maven commands
+      - run:
+          name: getDependencies
+          command: mvn dependency:go-offline  # gets the project dependencies
+      # saves the project dependencies
+      - save_cache:
           key: dyga-engine-{{ checksum "pom.xml" }}
-
-      - run: mvn dependency:go-offline  # gets the project dependencies
-
-      - save_cache: # saves the project dependencies
-        paths:
-          - ~/.m2
-        key: dyga-engine-{{ checksum "pom.xml" }}
-
-      - run: mvn package  # run the actual tests
-
-      - store_test_results:   # uploads the test metadata from the `target/surefire-reports` directory so that it can show up in the CircleCI dashboard.
-        # Upload test results for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
-        path: target/surefire-reports
-
-      - store_artifacts:    # store the uberjar as an artifact
-        # Upload test summary for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
-        path: target/dyga-core-0.2.jar
-        # See https://circleci.com/docs/2.0/deployment-integrations/ for deploy examples
-
+          paths:
+            - ~/.m2
+      # run the actual tests
+      - run:
+          name: mavenPackage
+          command: mvn package
+      # uploads the test metadata from the `target/surefire-reports` directory so that it can show up in the CircleCI dashboard.
+      - store_test_results:
+          path: target/surefire-reports   # Upload test results for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
+      # store the uberjar as an artifact
       - store_artifacts:
-        path: target/dyga-ui-0.2.jar
+          paths:
+            - target/dyga-core-0.2.jar    # Upload test summary for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
+          # See https://circleci.com/docs/2.0/deployment-integrations/ for deploy examples
+      - store_artifacts:
+          paths:
+            - target/dyga-ui-0.2.jar
