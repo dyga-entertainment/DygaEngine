@@ -33,7 +33,7 @@ jobs:       # a collection of steps
             - dyga-core/target/surefire-reports
       # store the uberjar as an artifact
       - store_artifacts:
-          paths:
-            - dyga-core/target/dyga-core-0.2.jar    # Upload test summary for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
-            - dyga-ui/target/dyga-ui-0.2.jar
+          path: dyga-core/target/dyga-core-0.2.jar    # Upload test summary for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
           # See https://circleci.com/docs/2.0/deployment-integrations/ for deploy examples
+      - store_artifacts:
+          path: dyga-ui/target/dyga-ui-0.2.jar
