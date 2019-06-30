@@ -19,7 +19,7 @@ deploy:
   key: $BINTRAY_API_KEY
   skip_cleanup: true # to upload artifacts created during the build
   on:
-    repo: dyga-entertainment/DygaEngine # Trigger build if build occurs in this branch
+    repo: dyga-entertainment/dyga-engine # Trigger build if build occurs in this branch
     tags: false  # Only if $TRAVIS_TAG is not set
 
 - provider: bintray
@@ -28,7 +28,7 @@ deploy:
   key: $BINTRAY_API_KEY
   skip_cleanup: true # to upload artifacts created during the build
   on:
-    repo: dyga-entertainment/DygaEngine # Trigger build if build occurs in this branch
+    repo: dyga-entertainment/dyga-engine # Trigger build if build occurs in this branch
     tags: false  # Only if $TRAVIS_TAG is not set
 
   # TODO LATER
