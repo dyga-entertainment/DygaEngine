@@ -14,7 +14,7 @@ cache:
 
 deploy:
 - provider: bintray
-  file: target/.travis/core-bintray.json
+  file: target/.bintray/core-bintray.json
   user: graygzou
   key: $BINTRAY_API_KEY
   skip_cleanup: true # to upload artifacts created during the build
@@ -23,7 +23,7 @@ deploy:
     tags: false  # Only if $TRAVIS_TAG is not set
 
 - provider: bintray
-  file: target/.travis/ui-bintray.json
+  file: target/.bintray/ui-bintray.json
   user: graygzou
   key: $BINTRAY_API_KEY
   skip_cleanup: true # to upload artifacts created during the build

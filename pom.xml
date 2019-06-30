@@ -15,14 +15,14 @@
 
     <groupId>com.dyga-entertainment.dyga-engine</groupId>
     <artifactId>dyga-engine</artifactId>
-    <version>0.2</version>
+    <version>0.2-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <scm>
         <connection>scm:git:git@github.com:dyga-entertainment/DygaEngine.git</connection>
         <developerConnection>scm:git:git@github.com:dyga-entertainment/DygaEngine.git</developerConnection>
         <url>https://github.com/dyga-entertainment/DygaEngine</url>
-        <tag>dyga-engine-0.0.1</tag>
+        <tag>dyga-engine-0.2-SNAPSHOT</tag>
     </scm>
     <developers>
         <developer>
@@ -54,8 +54,6 @@
 
     <!-- See https://maven.apache.org/pom.html#Properties -->
     <properties>
-        <dyga-core.version>3.9.1</dyga-core.version>
-        <dyga-ui.version>3.9.1</dyga-ui.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
@@ -83,11 +81,6 @@
                     <value>dev</value>
                 </property>
             </activation>
-            <!-- TODO Use maybe ? -->
-            <properties>
-                <directive1>DEBUG</directive1>
-                <directive2>LODE_RUNNER</directive2>
-            </properties>
             <!-- Specify the development build settings -->
             <build>
                 <defaultGoal>install</defaultGoal>
@@ -153,12 +146,12 @@
                             <resources>
                                 <resource>
                                     <directory>${basedir}</directory>
-                                    <include>.travis/core-bintray.json</include>
+                                    <include>.bintray/core-bintray.json</include>
                                     <filtering>true</filtering>
                                 </resource>
                                 <resource>
                                     <directory>${basedir}</directory>
-                                    <include>.travis/ui-bintray.json</include>
+                                    <include>.bintray/ui-bintray.json</include>
                                     <filtering>true</filtering>
                                 </resource>
                             </resources>
