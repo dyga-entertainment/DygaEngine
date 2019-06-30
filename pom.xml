@@ -27,44 +27,40 @@
     <developers>
         <developer>
             <id>gboiron</id>
-            <name>gboiron</name>
+            <name>Grégoire Boiron</name>
+            <email>gregoire.boiron@gmail.com</email>
         </developer>
     </developers>
 
-    <!-- To deploy remote repository -->
-    <distributionManagement>
-        <!--
-        <repository>
-            <id>mycompany-repository</id>
-            <name>MyCompany Repository</name>
-            <url>scp://repository.mycompany.com/repository/maven2</url>
-        </repository>
-        -->
-        <repository>
-            <id>bintray-dyga-entertainment-DygaEngine</id>
-            <name>dyga-entertainment-DygaEngine</name>
-            <url>https://api.bintray.com/maven/dyga-entertainment/DygaEngine/dyga-engine/;publish=1</url>
-        </repository>
-        <snapshotRepository>
-            <id>bintray-dyga-entertainment-DygaEngine</id>
-            <name>dyga-entertainment-DygaEngine</name>
-            <url>https://api.bintray.com/maven/dyga-entertainment/DygaEngine/dyga-engine/;publish=1</url>
-        </snapshotRepository>
-    </distributionManagement>
-
     <!-- See https://maven.apache.org/pom.html#Properties -->
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <!-- default environment -->
         <env>prod</env>
     </properties>
 
-    <!-- profiles -->
+    <!-- deploy to remote repositories -->
+    <distributionManagement>
+        <!-- Used for non snapshot distribution -->
+        <repository>
+            <id>bintray-dyga-entertainment-dyga-engine</id>
+            <name>dyga-entertainment-dyga-engine</name>
+            <url>https://api.bintray.com/maven/dyga-entertainment/dyga-engine/dyga-engine/;publish=1</url>
+        </repository>
+
+        <!-- Used for snapshot distribution -->
+        <snapshotRepository>
+            <id>bintray-dyga-entertainment-dyga-engine</id>
+            <name>dyga-entertainment-dyga-engine</name>
+            <url>https://api.bintray.com/maven/dyga-entertainment/dyga-engine/dyga-engine/;publish=1</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <!-- Profiles -->
     <profiles>
         <!-- Development Profile -->
         <profile>
