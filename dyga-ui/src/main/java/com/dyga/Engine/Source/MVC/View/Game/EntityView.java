@@ -17,8 +17,14 @@ public class EntityView extends JComponent {
         this.entityModel = entityModel;
     }
 
+    /*
     public void paint(Graphics g, Container im) {
         Position2D position = this.entityModel.getPosition();
         g.drawImage(this.entityModel.getSprite(), (int)position.getX(), (int)position.getY(), 50, 50, im) ;
+    }*/
+
+    public void draw(Graphics graphics) {
+        Position2D position = this.entityModel.getPosition();
+        graphics.drawImage(this.entityModel.getSprite(), (int)position.getX(), (int)position.getY(), 50, 50, null) ;
     }
 }

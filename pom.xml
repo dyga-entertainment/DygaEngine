@@ -15,58 +15,52 @@
 
     <groupId>com.dyga-entertainment.dyga-engine</groupId>
     <artifactId>dyga-engine</artifactId>
-    <version>0.2</version>
+    <version>0.2-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <scm>
         <connection>scm:git:git@github.com:dyga-entertainment/DygaEngine.git</connection>
         <developerConnection>scm:git:git@github.com:dyga-entertainment/DygaEngine.git</developerConnection>
         <url>https://github.com/dyga-entertainment/DygaEngine</url>
-        <tag>dyga-engine-0.0.1</tag>
+        <tag>dyga-engine-0.2-SNAPSHOT</tag>
     </scm>
     <developers>
         <developer>
             <id>gboiron</id>
-            <name>gboiron</name>
+            <name>Grégoire Boiron</name>
+            <email>gregoire.boiron@gmail.com</email>
         </developer>
     </developers>
 
-    <!-- To deploy remote repository -->
-    <distributionManagement>
-        <!--
-        <repository>
-            <id>mycompany-repository</id>
-            <name>MyCompany Repository</name>
-            <url>scp://repository.mycompany.com/repository/maven2</url>
-        </repository>
-        -->
-        <repository>
-            <id>bintray-dyga-entertainment-DygaEngine</id>
-            <name>dyga-entertainment-DygaEngine</name>
-            <url>https://api.bintray.com/maven/dyga-entertainment/DygaEngine/dyga-engine/;publish=1</url>
-        </repository>
-        <snapshotRepository>
-            <id>bintray-dyga-entertainment-DygaEngine</id>
-            <name>dyga-entertainment-DygaEngine</name>
-            <url>https://api.bintray.com/maven/dyga-entertainment/DygaEngine/dyga-engine/;publish=1</url>
-        </snapshotRepository>
-    </distributionManagement>
-
     <!-- See https://maven.apache.org/pom.html#Properties -->
     <properties>
-        <dyga-core.version>3.9.1</dyga-core.version>
-        <dyga-ui.version>3.9.1</dyga-ui.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <!-- default environment -->
         <env>prod</env>
     </properties>
 
-    <!-- profiles -->
+    <!-- deploy to remote repositories -->
+    <distributionManagement>
+        <!-- Used for non snapshot distribution -->
+        <repository>
+            <id>bintray-dyga-entertainment-dyga-engine</id>
+            <name>dyga-entertainment-dyga-engine</name>
+            <url>https://api.bintray.com/maven/dyga-entertainment/dyga-engine/dyga-engine/;publish=1</url>
+        </repository>
+
+        <!-- Used for snapshot distribution -->
+        <snapshotRepository>
+            <id>bintray-dyga-entertainment-dyga-engine</id>
+            <name>dyga-entertainment-dyga-engine</name>
+            <url>https://api.bintray.com/maven/dyga-entertainment/dyga-engine/dyga-engine/;publish=1</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <!-- Profiles -->
     <profiles>
         <!-- Development Profile -->
         <profile>
@@ -83,11 +77,6 @@
                     <value>dev</value>
                 </property>
             </activation>
-            <!-- TODO Use maybe ? -->
-            <properties>
-                <directive1>DEBUG</directive1>
-                <directive2>LODE_RUNNER</directive2>
-            </properties>
             <!-- Specify the development build settings -->
             <build>
                 <defaultGoal>install</defaultGoal>
@@ -107,7 +96,7 @@
                                 <configuration>
                                     <archive>
                                         <manifest>
-                                            <mainClass>Scripts.LodeRunner</mainClass>
+                                            <mainClass>LodeRunner</mainClass>
                                         </manifest>
                                     </archive>
                                     <descriptorRefs>
@@ -153,12 +142,12 @@
                             <resources>
                                 <resource>
                                     <directory>${basedir}</directory>
-                                    <include>.travis/core-bintray.json</include>
+                                    <include>.bintray/core-bintray.json</include>
                                     <filtering>true</filtering>
                                 </resource>
                                 <resource>
                                     <directory>${basedir}</directory>
-                                    <include>.travis/ui-bintray.json</include>
+                                    <include>.bintray/ui-bintray.json</include>
                                     <filtering>true</filtering>
                                 </resource>
                             </resources>
@@ -198,8 +187,61 @@
                             </compilerArgs>
                         </configuration>
                     </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-dependency-plugin</artifactId>
+                        <version>2.6</version>
+                        <configuration>
+                            <excludeGroupIds>com.dyga-entertainment.dyga-engine</excludeGroupIds>
+                        </configuration>
+                    </plugin>
                 </plugins>
             </build>
         </profile>
     </profiles>
+
+    <!-- Basic build -->
+    <build>
+        <plugins>
+            <!-- Code Coverage plugin : we want it in every profile -->
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.4</version>
+                <executions>
+                    <execution>
+                        <id>prepare-agent</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.eluder.coveralls</groupId>
+                <artifactId>coveralls-maven-plugin</artifactId>
+                <version>4.3.0</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>javax.xml.bind</groupId>
+                        <artifactId>jaxb-api</artifactId>
+                        <version>2.2.3</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.22.1</version>
+                    <configuration>
+                        <useSystemClassLoader>false</useSystemClassLoader>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>

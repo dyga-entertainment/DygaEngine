@@ -1,7 +1,12 @@
 package com.dyga.Engine.Source.MVC.View;
 
 import javax.swing.*;
+
+import com.dyga.Engine.Source.Components.Physics.Transform;
+import com.dyga.Engine.Source.Components.Renderer.SpriteRenderer;
+import com.dyga.Engine.Source.Entity.Entity;
 import com.dyga.Engine.Source.MVC.Controler.MainControler;
+import com.dyga.Engine.Source.MVC.Model.Game.EntityModel;
 import com.dyga.Engine.Source.MVC.Model.MainModel;
 import com.dyga.Engine.Source.MVC.Model.Menu.Component.ModelButton;
 import com.dyga.Engine.Source.MVC.Model.Menu.Component.ModelComponent;
@@ -13,17 +18,15 @@ import com.dyga.Engine.Source.MVC.View.Game.EntityView;
 import com.dyga.Engine.Source.MVC.View.Menu.Component.ViewButton;
 import com.dyga.Engine.Source.MVC.View.Menu.Component.ViewLayer;
 import com.dyga.Engine.Source.MVC.View.Menu.Component.ViewPanel;
+import com.dyga.Engine.Source.Utils.Math.Position2D;
 import com.dyga.Engine.Source.Utils.WrapLayout;
 
 import java.awt.*;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
+import java.awt.image.BufferedImage;
 import java.text.DecimalFormat;
 import java.util.Dictionary;
 import java.util.Hashtable;
 import java.util.UUID;
-
-// <!> This should be call SCENE !
 
 /**
  * Source.Main Source.MVC.View - VIEW
@@ -37,11 +40,13 @@ public class MainView {
 
     /** The view know the model in order to get information from him */
     private MainModel mainModel;
+
     /** The view know the controler as well to attach him to each view. */
     private MainControler mainControler;
 
     private static JFrame gameFrame;
-    private static ViewPanel activeGameView;
+    private static JPanel activeScene;
+    //private static ViewPanel activeGameView;
     //private static JPanel activeGamePanel;
 
 
@@ -86,8 +91,14 @@ public class MainView {
         // Setup the container window
         this.setupJFrame(activeRendering);
 
+        // Create an empty scene for now
+        this.activeScene = new JPanel();
+        gameFrame.getContentPane().add(this.activeScene);
+
+        this.screenImage = this.activeScene.createImage(WIDTH, HEIGHT);
+
         // Create the view
-        this.createFirstView();
+        //this.createFirstView();
     }
 
     private void setupJFrame(boolean activeRendering) {
@@ -110,7 +121,7 @@ public class MainView {
         Graphics graphics;
         try {
             // Retrieve the graphics from the current view
-            graphics = activeGameView.getGraphics();
+            graphics = activeScene.getGraphics();
             if (graphics != null && screenImage != null) {
                 graphics.drawImage(screenImage, 0, 0, null);
             }
@@ -121,7 +132,7 @@ public class MainView {
     }
 
 
-    public void renderActiveView(double averageFPS, double averageUPS) {
+    public void renderCurrentScene(double averageFPS, double averageUPS) {
         if (this.screenImage == null) {
             System.out.println("screenImage is null");
             return;
@@ -148,16 +159,65 @@ public class MainView {
 
         // draw the pause and quit 'buttons'
         // TODO
-        drawButtons(dbg);
+        drawHUD(dbg);
+
+
+        drawScene(dbg);
 
         this.dbg.setColor(Color.black);
 
-        this.activeGameView.render();
+        // Render the scene (view for now)
+        //this.activeGameView.render(this.dbg);
+    }
 
-        // draw game elements: the obstacles and the worm
+    private void drawHUD(Graphics dbg) {
+        drawButtons(dbg);
+
         // TODO
-        //obs.draw(dbg);
-        //fred.draw(dbg);
+    }
+
+    private void drawScene(Graphics dbg) {
+        for(Entity entity : mainModel.getModelEntities()) {
+            // Retrieve the Transform component
+            Transform t = entity.getComponent(Transform.class);
+            SpriteRenderer sr = entity.getComponent(SpriteRenderer.class);
+            drawEntity(sr, t);
+        }
+    }
+
+    // Render the entity on screen
+    private void drawEntity(SpriteRenderer sr, Transform t) {
+        boolean notOverflowHorizontal, notOverflowVertical = true;
+        int imageWidth = sr.getWidth();
+        int imageHeight = sr.getHeight();
+        if((notOverflowHorizontal = t.getPosition().getX() + imageWidth * t.getScale().getX() <= WIDTH || t.getPosition().getX() < 0) && (notOverflowVertical = t.getPosition().getY() + imageHeight * t.getScale().getY() <= HEIGHT || t.getPosition().getY() < 0)) {
+            dbg.drawImage( sr.getSprite(), (int)t.getPosition().getX(), (int)t.getPosition().getY(), (int)(imageWidth * t.getScale().getX()), (int)(imageHeight * t.getScale().getY()), null);
+        } else {
+            if (!notOverflowHorizontal) {
+                // left
+                int width = t.getPosition().getX() < 0 ? (int)Math.abs(t.getPosition().getX()) : (int)((WIDTH - t.getPosition().getX()) / sr.getSprite().getWidth());
+                int height = imageHeight / sr.getSprite().getHeight();
+                /*
+                int x = 0;
+                int y = 0;
+                int w = width;
+                int h = imageHeight;
+                */
+
+                System.out.println(sr.getSprite().getWidth());
+                System.out.println(sr.getSprite().getHeight());
+
+                BufferedImage leftSubImage = sr.getSprite().getSubimage(0, 0, width, height);
+                BufferedImage rightSubImage = sr.getSprite().getSubimage(width, 0, sr.getSprite().getWidth() - width, height);
+
+                dbg.drawImage(leftSubImage, 0, 0, width * sr.getSprite().getWidth(), (int)(imageHeight * t.getScale().getY()), null);
+                dbg.drawImage(rightSubImage, (int)t.getPosition().getX(), (int)t.getPosition().getY(), (imageWidth - width) * sr.getSprite().getWidth(), (int)(imageHeight * t.getScale().getY()), null);
+            }
+            if (!notOverflowVertical) {
+                // TODO
+            }
+        }
+
     }
 
     private void drawButtons(Graphics g)
@@ -189,8 +249,15 @@ public class MainView {
 
         if (false)
             g.setColor(Color.black);
-    }  // drawButtons()
+    }
 
+
+    public void addScene(String sceneName) {
+    }
+
+    /**
+     * Remove that
+     **/
     private void createFirstView() {
         System.out.println("[DEBUG] CREATE THE VIEW");
 
@@ -204,13 +271,13 @@ public class MainView {
         // Create the view based on the model
         System.out.println("[DEBUG] Build a new ViewPanel to display = " + menuView.getName());
         ModelPanel mainComponent = menuView.getModelComponent();
-        this.activeGameView = createView(mainComponent, this.mainControler);
+        this.activeScene = createView(mainComponent, this.mainControler);
 
         // Add it at the end !
-        gameFrame.getContentPane().add(this.activeGameView);
+        gameFrame.getContentPane().add(this.activeScene);
 
         // Create the image from the view
-        this.screenImage = activeGameView.createImage(WIDTH, HEIGHT);
+        this.screenImage = activeScene.createImage(WIDTH, HEIGHT);
 
         if (this.screenImage == null) {
             System.out.println("screenImage is null");

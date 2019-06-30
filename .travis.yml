@@ -14,21 +14,21 @@ cache:
 
 deploy:
 - provider: bintray
-  file: target/.travis/core-bintray.json
+  file: target/.bintray/core-bintray.json
   user: graygzou
   key: $BINTRAY_API_KEY
   skip_cleanup: true # to upload artifacts created during the build
   on:
-    repo: dyga-entertainment/DygaEngine # Trigger build if build occurs in this branch
+    repo: dyga-entertainment/dyga-engine # Trigger build if build occurs in this branch
     tags: false  # Only if $TRAVIS_TAG is not set
 
 - provider: bintray
-  file: target/.travis/ui-bintray.json
+  file: target/.bintray/ui-bintray.json
   user: graygzou
   key: $BINTRAY_API_KEY
   skip_cleanup: true # to upload artifacts created during the build
   on:
-    repo: dyga-entertainment/DygaEngine # Trigger build if build occurs in this branch
+    repo: dyga-entertainment/dyga-engine # Trigger build if build occurs in this branch
     tags: false  # Only if $TRAVIS_TAG is not set
 
   # TODO LATER
@@ -42,6 +42,10 @@ deploy:
   #  on:
   #    repo: dyga-entertainment/DygaEngine
   #    tags: true
+
+after_success:
+  - mvn clean test jacoco:report coveralls:report -DrepoToken=$COVERALLS_TOKEN
+  - bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN
 
 notifications:
   email:

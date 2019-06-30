@@ -5,16 +5,28 @@
     <parent>
         <artifactId>dyga-engine</artifactId>
         <groupId>com.dyga-entertainment.dyga-engine</groupId>
-        <version>0.2</version>
+        <version>0.2-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>examples</artifactId>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
     <dependencies>
         <dependency>
             <groupId>com.dyga-entertainment.dyga-engine</groupId>
             <artifactId>dyga-ui</artifactId>
-            <version>0.2</version>
+            <version>0.2-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
