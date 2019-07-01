@@ -3,13 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>com.dyga-entertainment.dyga-engine</groupId>
+        <groupId>com.github.dyga-entertainment</groupId>
         <artifactId>dyga-engine</artifactId>
         <version>0.2-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <!-- We do not specify the groupId and version to keep the same as the parent -->
-    <artifactId>dyga-core</artifactId>
+    <artifactId>dyga-engine-core</artifactId>
 
 </project>

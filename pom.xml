@@ -8,12 +8,12 @@
     <url>https://github.com/dyga-entertainment/DygaEngine</url>
     <description>Made a basic game engine in 2D with Swing library.</description>
     <modules>
-        <module>dyga-ui</module>
-        <module>dyga-core</module>
-        <module>examples</module>
+        <module>dyga-engine-ui</module>
+        <module>dyga-engine-core</module>
+        <module>dyga-engine-examples</module>
     </modules>
 
-    <groupId>com.dyga-entertainment.dyga-engine</groupId>
+    <groupId>com.github.dyga-entertainment</groupId>
     <artifactId>dyga-engine</artifactId>
     <version>0.2-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -66,9 +66,9 @@
         <profile>
             <id>development</id>
             <modules>
-                <module>dyga-core</module>
-                <module>dyga-ui</module>
-                <module>examples</module>
+                <module>dyga-engine-core</module>
+                <module>dyga-engine-ui</module>
+                <module>dyga-engine-examples</module>
             </modules>
             <!-- Specify the development build settings -->
             <build>
@@ -106,8 +106,8 @@
         <profile>
             <id>test</id>
             <modules>
-                <module>dyga-core</module>
-                <module>dyga-ui</module>
+                <module>dyga-engine-core</module>
+                <module>dyga-engine-ui</module>
             </modules>
             <properties>
                 <env>test</env>
@@ -120,8 +120,8 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <modules>
-                <module>dyga-core</module>
-                <module>dyga-ui</module>
+                <module>dyga-engine-core</module>
+                <module>dyga-engine-ui</module>
             </modules>
             <!-- Specify the production build settings -->
             <build>

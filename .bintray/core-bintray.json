@@ -1,6 +1,6 @@
 {
   "package": {
-    "name": "com.dyga.engine-core",
+    "name": "com.dyga.dyga-engine-core",
     "repo": "dyga-engine",
     "subject": "dyga-entertainment",
     "desc": "2D game engine core which allows to build platformer and puzzle games.",
@@ -25,8 +25,8 @@
 
   "files":
   [
-    {"includePattern": "dyga-core/target/(.*\.jar)", "uploadPattern": "com/dyga-entertainment/dyga-engine/dyga-core/${project.version}/$1"},
-    {"includePattern": "dyga-core/pom.xml", "uploadPattern": "com/dyga-entertainment/dyga-engine/dyga-core/${project.version}/dyga-core-${project.version}.pom"}
+    {"includePattern": "dyga-engine-core/target/(.*\.jar)", "uploadPattern": "com/dyga-entertainment/dyga-engine/dyga-engine-core/${project.version}/$1"},
+    {"includePattern": "dyga-engine-core/pom.xml", "uploadPattern": "com/dyga-entertainment/dyga-engine/dyga-engine-core/${project.version}/dyga-engine-core-${project.version}.pom"}
   ],
   "publish": true
 }
