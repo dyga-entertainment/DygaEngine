@@ -12,6 +12,9 @@ cache:
   directories:
   - "$HOME/.cache"
 
+before_deploy:
+  - mvn compile -P production   # Generate target to push to bintray
+
 deploy:
 - provider: bintray
   file: target/.bintray/core-bintray.json
