@@ -27,8 +27,8 @@
     </build>
     <dependencies>
         <dependency>
-            <groupId>com.dyga-entertainment.dyga-engine</groupId>
-            <artifactId>dyga-ui</artifactId>
+            <groupId>com.github.dyga-entertainment</groupId>
+            <artifactId>dyga-engine-ui</artifactId>
             <version>0.2-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>

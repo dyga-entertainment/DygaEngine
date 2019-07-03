@@ -161,7 +161,6 @@ public class MainView {
         // TODO
         drawHUD(dbg);
 
-
         drawScene(dbg);
 
         this.dbg.setColor(Color.black);
@@ -187,16 +186,35 @@ public class MainView {
 
     // Render the entity on screen
     private void drawEntity(SpriteRenderer sr, Transform t) {
-        boolean notOverflowHorizontal, notOverflowVertical = true;
         int imageWidth = sr.getWidth();
         int imageHeight = sr.getHeight();
-        if((notOverflowHorizontal = t.getPosition().getX() + imageWidth * t.getScale().getX() <= WIDTH || t.getPosition().getX() < 0) && (notOverflowVertical = t.getPosition().getY() + imageHeight * t.getScale().getY() <= HEIGHT || t.getPosition().getY() < 0)) {
-            dbg.drawImage( sr.getSprite(), (int)t.getPosition().getX(), (int)t.getPosition().getY(), (int)(imageWidth * t.getScale().getX()), (int)(imageHeight * t.getScale().getY()), null);
+
+        System.out.println(imageWidth + ", " + imageHeight);
+
+        int reelWidth = imageWidth * (int)t.getScale().getX();
+        int reelHeight = imageHeight * (int)t.getScale().getY();
+
+        boolean overflowHorizontal = !(t.getPosition().getX() + reelWidth <= WIDTH || t.getPosition().getX() < 0);
+        boolean overflowVertical = !(t.getPosition().getY() + reelHeight <= HEIGHT || t.getPosition().getY() < 0);
+
+        if(!overflowHorizontal && !overflowVertical) {
+
+            BufferedImage subImage = sr.getSprite().getSubimage(0, 0, 5, 5);
+            dbg.drawImage(subImage, (int)t.getPosition().getX(), (int)t.getPosition().getY(), (int)(imageWidth * t.getScale().getX()), (int)(imageHeight * t.getScale().getY()), null);
+
+            //dbg.drawImage( sr.getSprite(), (int)t.getPosition().getX(), (int)t.getPosition().getY(), (int)(imageWidth * t.getScale().getX()), (int)(imageHeight * t.getScale().getY()), null);
         } else {
-            if (!notOverflowHorizontal) {
+            if (overflowHorizontal) {
+                // draw the left side for now
+                int width = (int)((WIDTH - t.getPosition().getX()) / imageWidth);
+                width = 5;
+                int height = imageHeight;
+                BufferedImage leftSubImage = sr.getSprite().getSubimage(0, 0, width, height);
+                dbg.drawImage(leftSubImage, 0, 0, width * (int)t.getScale().getX(), height * (int)t.getScale().getY(), null);
+
+
                 // left
-                int width = t.getPosition().getX() < 0 ? (int)Math.abs(t.getPosition().getX()) : (int)((WIDTH - t.getPosition().getX()) / sr.getSprite().getWidth());
-                int height = imageHeight / sr.getSprite().getHeight();
+
                 /*
                 int x = 0;
                 int y = 0;
@@ -207,14 +225,11 @@ public class MainView {
                 System.out.println(sr.getSprite().getWidth());
                 System.out.println(sr.getSprite().getHeight());
 
-                BufferedImage leftSubImage = sr.getSprite().getSubimage(0, 0, width, height);
+
                 BufferedImage rightSubImage = sr.getSprite().getSubimage(width, 0, sr.getSprite().getWidth() - width, height);
 
                 dbg.drawImage(leftSubImage, 0, 0, width * sr.getSprite().getWidth(), (int)(imageHeight * t.getScale().getY()), null);
-                dbg.drawImage(rightSubImage, (int)t.getPosition().getX(), (int)t.getPosition().getY(), (imageWidth - width) * sr.getSprite().getWidth(), (int)(imageHeight * t.getScale().getY()), null);
-            }
-            if (!notOverflowVertical) {
-                // TODO
+                //dbg.drawImage(rightSubImage, (int)t.getPosition().getX(), (int)t.getPosition().getY(), (imageWidth - width) * sr.getSprite().getWidth(), (int)(imageHeight * t.getScale().getY()), null);
             }
         }
 
