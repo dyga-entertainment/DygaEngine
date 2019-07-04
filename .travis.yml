@@ -12,6 +12,13 @@ cache:
   directories:
   - "$HOME/.cache"
 
+# Deployment to sonarcloud
+addons:
+  sonarcloud:
+    organization: "dyga-entertainment"
+    token:
+      secure: $SONARCLOUD_TOKEN
+
 before_deploy:
   - mvn compile -P production   # Generate target to push to bintray
 
@@ -47,7 +54,7 @@ deploy:
   #    tags: true
 
 after_success:
-  - mvn clean test jacoco:report coveralls:report -DrepoToken=$COVERALLS_TOKEN
+  - mvn clean test jacoco:report coveralls:report -DrepoToken=$COVERALLS_TOKEN install sonar:sonar -Dsonar.projectKey=dyga-entertainment_dyga-engine
   - bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN
 
 notifications:
