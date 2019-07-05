@@ -2,6 +2,8 @@ package com.dyga.Engine.Source.Entity;
 
 import com.dyga.Engine.Source.Components.Component;
 import com.dyga.Engine.Source.Components.Gameplay.GameplayScript;
+import com.dyga.Engine.Source.Components.Physics.Transform;
+import com.dyga.Engine.Source.Utils.Math.Position2D;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,11 +47,12 @@ public class Entity {
         return component;
     }
 
-    public void update() {
+    public void update(boolean wrapScreen) {
         for (Component component : this.components) {
             // Is it the only component with update ?
             if(component instanceof GameplayScript) {
                 ((GameplayScript) component).update();
+
             }
         }
     }

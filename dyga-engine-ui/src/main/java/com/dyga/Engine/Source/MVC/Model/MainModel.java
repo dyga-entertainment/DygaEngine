@@ -1,12 +1,17 @@
 package com.dyga.Engine.Source.MVC.Model;
 
+import com.dyga.Engine.Source.Components.Physics.Transform;
 import com.dyga.Engine.Source.Entity.Entity;
 import com.dyga.Engine.Source.MVC.Model.Game.EntityModel;
 import com.dyga.Engine.Source.MVC.Model.Menu.ModelView;
 import com.dyga.Engine.Source.MVC.View.Game.Scene;
 import com.dyga.Engine.Source.Utils.JsonLoaders.EntityLoader;
 import com.dyga.Engine.Source.Utils.JsonLoaders.MenuLoader;
+import com.dyga.Engine.Source.Utils.Math.Position2D;
+
 import java.util.*;
+
+import static com.dyga.Engine.Source.Main.Game.WIDTH;
 
 /**
  * Source.Main Source.MVC.Model - MODEL
@@ -89,10 +94,16 @@ public class MainModel {
         entities = scene.getEntities();
     }
 
-    public void update() {
+    public void update(boolean wrapScreen) {
         // Call the update method on all the Entity
         for(Entity entity : entities) {
-            entity.update();
+            entity.update(wrapScreen);
+
+            Transform transform = entity.getComponent(Transform.class);
+            if(wrapScreen && transform != null) {
+                transform.setPosition(new Position2D(transform.getPosition().getX() % WIDTH, transform.getPosition().getY()));
+                System.out.println(transform.toString());
+            }
         }
     }
 

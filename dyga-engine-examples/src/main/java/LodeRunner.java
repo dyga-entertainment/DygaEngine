@@ -17,6 +17,8 @@ public class LodeRunner {
 		// Create the game
 		Game lodeRunner = new Game("com/dyga/LodeRunner", 60, true);
 
+		lodeRunner.setWrapScreen(true);
+
 		// Create a scene
 		Scene fpsView = new Scene();
 
@@ -24,11 +26,22 @@ public class LodeRunner {
 		Entity madMonk = new Entity();
 		List<Component> components = Stream.of(
 			new Transform(new Position2D(100,100), new Position2D(5, 5)),
-			new SpriteRenderer("Assets/Sprites/Enemy/Idle/mad_monk_stop_left.png"),
+			new SpriteRenderer("Assets/Sprites/Enemy/Falls/mad_monk_fall1.png"),
 			new SB_MadMonk()
 		).collect(Collectors.toList());
 		madMonk.addComponents(components);
 		fpsView.addEntity(madMonk);
+
+
+		// Create a wall
+		Entity wall = new Entity();
+		components = Stream.of(
+			new Transform(new Position2D(0,0), new Position2D(1, 1)),
+			new SpriteRenderer("Assets/Sprites/Blocs/Ground/bloc_pierre.png")
+		).collect(Collectors.toList());
+		wall.addComponents(components);
+		fpsView.addEntity(wall);
+
 
 		// Add the scene to game
 		lodeRunner.addScene(fpsView);

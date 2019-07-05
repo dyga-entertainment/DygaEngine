@@ -28,15 +28,15 @@ import java.util.Dictionary;
 import java.util.Hashtable;
 import java.util.UUID;
 
+import static com.dyga.Engine.Source.Main.Game.HEIGHT;
+import static com.dyga.Engine.Source.Main.Game.WIDTH;
+
 /**
  * Source.Main Source.MVC.View - VIEW
  * Takes care of showing to the player the UI describe by the model.
  * The controler will be attached to it in order to react to user events.
  */
 public class MainView {
-
-    private static int WIDTH = 300;
-    private static int HEIGHT = 100;
 
     /** The view know the model in order to get information from him */
     private MainModel mainModel;
@@ -102,18 +102,21 @@ public class MainView {
     }
 
     private void setupJFrame(boolean activeRendering) {
+        /*
+        NOT RIGHT NOW
         Toolkit tk = Toolkit.getDefaultToolkit();
         Dimension scrDim = tk.getScreenSize();
         WIDTH = scrDim.width;
         HEIGHT = scrDim.height;
+        */
 
         this.gameFrame.setSize(WIDTH, HEIGHT);
         this.gameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.gameFrame.setIgnoreRepaint(activeRendering);
-        this.gameFrame.setUndecorated(true);   // no borders or title bar
+        //this.gameFrame.setUndecorated(true);   // no borders or title bar
         this.gameFrame.setIgnoreRepaint(true);  // turn off all paint events since doing active rendering
         //gameFrame.pack();
-        this.gameFrame.setResizable(false);
+        //this.gameFrame.setResizable(false);
         this.gameFrame.setVisible(true);
     }
 
@@ -130,7 +133,6 @@ public class MainView {
             System.out.println("Graphics context error: " + exception);
         }
     }
-
 
     public void renderCurrentScene(double averageFPS, double averageUPS) {
         if (this.screenImage == null) {
@@ -185,33 +187,86 @@ public class MainView {
     }
 
     // Render the entity on screen
-    private void drawEntity(SpriteRenderer sr, Transform t) {
-        int imageWidth = sr.getWidth();
-        int imageHeight = sr.getHeight();
+    private void drawEntity(SpriteRenderer spriteRenderer, Transform t) {
 
-        System.out.println(imageWidth + ", " + imageHeight);
+        int width = spriteRenderer.getWidth();
+        int height = spriteRenderer.getHeight();
 
-        int reelWidth = imageWidth * (int)t.getScale().getX();
-        int reelHeight = imageHeight * (int)t.getScale().getY();
+        int scaledWidth = width * (int)t.getScale().getX();
+        int scaledHeight = height * (int)t.getScale().getY();
 
-        boolean overflowHorizontal = !(t.getPosition().getX() + reelWidth <= WIDTH || t.getPosition().getX() < 0);
-        boolean overflowVertical = !(t.getPosition().getY() + reelHeight <= HEIGHT || t.getPosition().getY() < 0);
+        boolean hasOverflowHorizontal = !(t.getPosition().getX() + scaledWidth <= WIDTH || t.getPosition().getX() < 0);
+        boolean hasOverflowVertical = !(t.getPosition().getY() + scaledHeight <= HEIGHT || t.getPosition().getY() < 0);
 
-        if(!overflowHorizontal && !overflowVertical) {
-
-            BufferedImage subImage = sr.getSprite().getSubimage(0, 0, 5, 5);
-            dbg.drawImage(subImage, (int)t.getPosition().getX(), (int)t.getPosition().getY(), (int)(imageWidth * t.getScale().getX()), (int)(imageHeight * t.getScale().getY()), null);
-
-            //dbg.drawImage( sr.getSprite(), (int)t.getPosition().getX(), (int)t.getPosition().getY(), (int)(imageWidth * t.getScale().getX()), (int)(imageHeight * t.getScale().getY()), null);
+        if(!hasOverflowHorizontal && !hasOverflowVertical) {
+            spriteRenderer.draw(dbg, t.getPosition(), t.getScale());
         } else {
-            if (overflowHorizontal) {
+            if (hasOverflowHorizontal) {
+
+                // Still draw the current sprite
+                // ===========================
+                spriteRenderer.draw(dbg, t.getPosition(), t.getScale());
+
+                // draw a sprite on the other side
+                // ===========================
+                Position2D position = new Position2D();
+
+                // Compute the actual overflow with the display image
+                double overflowWidthScaled = (t.getPosition().getX() + scaledWidth) - WIDTH;
+                // Compute the scaled overflow x position
+                double xPosSplitScaled = scaledWidth - overflowWidthScaled;
+
+                int x = (int)-xPosSplitScaled;
+
+                position.setLocation(x, t.getPosition().getY());
+
+                spriteRenderer.draw(dbg, position, t.getScale());
+
+                /*
+
+                // Convert the overflow width in the image actual bounds.
+                double reelWidthOverflow = overflowWidthScaled / sr.getSprite().getWidth();
+                //System.out.println("reel overflow width : " + reelWidthOverflow);
+
+                // Compute the overflow x position
+                double xPosSplit = sr.getSprite().getWidth() - reelWidthOverflow;
+
+                System.out.println("right1 : " + 0);
+                System.out.println("right2 : " + xPosSplit);
+
+                // Display on the right side the left side of the sprite
+                BufferedImage subImage = sr.getSprite().getSubimage(
+                    0,
+                    0,
+                    (int)xPosSplit,
+                    sr.getSprite().getHeight()
+                );
+                dbg.drawImage(subImage, (int) t.getPosition().getX(), (int)t.getPosition().getY(), scaledWidth, scaledHeight, null);
+
+                if((int)Math.floor(sr.getSprite().getWidth() - xPosSplit) > 0) {
+                    System.out.println("left1 : " + xPosSplit);
+                    System.out.println("left2 : " + (sr.getSprite().getWidth() - xPosSplit));
+
+                    // Display on the left side the right of the sprite
+                    BufferedImage subImage2 = sr.getSprite().getSubimage(
+                        (int)xPosSplit-1,
+                        0,
+                        (int)Math.floor(sr.getSprite().getWidth() - (xPosSplit-1)),
+                        sr.getSprite().getHeight()
+                    );
+                    dbg.drawImage(subImage2, 0, (int) t.getPosition().getY(), (int)overflowWidthScaled, scaledHeight, null);
+                }
+                */
+
+
                 // draw the left side for now
+                /*
                 int width = (int)((WIDTH - t.getPosition().getX()) / imageWidth);
                 width = 5;
                 int height = imageHeight;
                 BufferedImage leftSubImage = sr.getSprite().getSubimage(0, 0, width, height);
                 dbg.drawImage(leftSubImage, 0, 0, width * (int)t.getScale().getX(), height * (int)t.getScale().getY(), null);
-
+                */
 
                 // left
 
@@ -222,6 +277,7 @@ public class MainView {
                 int h = imageHeight;
                 */
 
+                /*
                 System.out.println(sr.getSprite().getWidth());
                 System.out.println(sr.getSprite().getHeight());
 
@@ -230,6 +286,7 @@ public class MainView {
 
                 dbg.drawImage(leftSubImage, 0, 0, width * sr.getSprite().getWidth(), (int)(imageHeight * t.getScale().getY()), null);
                 //dbg.drawImage(rightSubImage, (int)t.getPosition().getX(), (int)t.getPosition().getY(), (imageWidth - width) * sr.getSprite().getWidth(), (int)(imageHeight * t.getScale().getY()), null);
+                */
             }
         }
 

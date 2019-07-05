@@ -50,4 +50,9 @@ public class Transform extends Component {
     public void setRotation(Position2D rotation) {
         this.rotation = rotation;
     }
+
+    @Override
+    public String toString() {
+        return "[Transform] Position = " + this.getPosition().toString() + ", Scale = " + this.getScale() + ", Rotation = " + this.getRotation();
+    }
 }

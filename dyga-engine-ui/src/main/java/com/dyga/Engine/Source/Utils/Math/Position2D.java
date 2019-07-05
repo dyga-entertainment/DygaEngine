@@ -31,4 +31,9 @@ public class Position2D extends Point2D {
         this.x = x;
         this.y = y;
     }
+
+    @Override
+    public String toString() {
+        return "(" + this.x + ", " + this.y + ")";
+    }
 }

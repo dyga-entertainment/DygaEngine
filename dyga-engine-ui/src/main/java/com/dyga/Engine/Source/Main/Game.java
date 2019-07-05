@@ -26,6 +26,9 @@ import static com.dyga.Engine.Source.Utils.Math.Converter.*;
  */
 public class Game {
 
+    public static int WIDTH = 1000;
+    public static int HEIGHT = 1000;
+
     // Number of frames with a delay of 0 ms before the animation thread yields
     // to other running threads.
     private static final int NO_DELAYS_PER_YIELD = 16;
@@ -57,6 +60,7 @@ public class Game {
 
     /** Others **/
     private static String gameName;
+    private static boolean wrapScreen;
 
     /** Game **/
     private static String[] levels;
@@ -186,7 +190,7 @@ public class Game {
 
     private static void gameUpdate() {
         // Update the MainModel which will update the model representation of the scene
-        mainModel.update();
+        mainModel.update(Game.wrapScreen);
     }
 
     private static void gameRender() {
@@ -290,5 +294,9 @@ public class Game {
         //this.mainView.addScene(sceneName);
 
         return 0;
+    }
+
+    public void setWrapScreen(boolean wrapScreen) {
+        Game.wrapScreen = wrapScreen;
     }
 }
