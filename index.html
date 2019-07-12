@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Metenorage</title>
+  <link rel="icon" href="images/chat.ico" />
+
+  <link rel="stylesheet" type="text/css" href="css/fonts/zorque-font.css" defer>
+  <link rel="stylesheet" type="text/css" href="css/base_stylesheet.css" defer>
+  <link rel="stylesheet" type="text/css" href="css/project_stylesheet.css" defer>
+<style>
+.keys {
+	display: block;
+	margin: 0 auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 1.3rem;
+	color: white;
+	text-align: center;
+	transition: all 300ms linear;
+	z-index: -1;
+}
+.keys > span {
+  z-index: 102;
+}
+form > div {
+    /*
+  transition: transform 400ms ease-out;*/
+  z-index: 1;
+  display: none;
+}
+label:before,
+label:after {
+	color: white;
+	display: block;
+	background: rgba(255,255,255,0.2);
+	position: absolute;
+	padding: 1rem;
+	font-size: 3rem;
+	height: 10rem;
+	vertical-align: middle;
+	line-height: 10rem;
+	top: 50%;
+	transform: translate3d(0, -50%, 0);
+	cursor: pointer;
+}
+label:before {
+	content: "\276D";
+	right: 100%;
+	border-top-left-radius: 50%;
+	border-bottom-left-radius: 50%;
+}
+label:after {
+	content: "\276C";
+	left: 100%;
+	border-top-right-radius: 50%;
+	border-bottom-right-radius: 50%;
+}
+input {
+  display: none;
+}
+form {
+  margin: 0 auto;
+  width: 100%;
+}
+input[type=radio]:checked + div {
+  display: block;
+    width: 100%;
+  /*transform: translate3d(-100%, 0, 0);*/
+}
+/*------------------*/
+/* Big Carousel section */
+/*------------------*/
+#carrousel-left-button img, #carrousel-right-button img {
+  margin: auto;
+}
+#carrousel-left-button:hover, #carrousel-right-button:hover {
+  background: #1e8696;
+}
+.left_chevron {
+	margin: 0 auto;
+	position: fixed;
+	display: block;
+	top: 0px;
+	left: 0px;
+	width: 15%;
+	text-align: center;
+	line-height: 100vh;
+}
+.left_chevron_legend {
+	font-size: 130%;
+	position: fixed;
+	left: 2%;
+	top: 52%;
+	width: 10%;
+	text-align: center;
+	word-wrap: break-word;
+	line-height: normal;
+	font-family: 'customfont';
+}
+.right_chevron {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 15%;
+	text-align: center;
+	line-height: 100vh;
+}
+.right_chevron_legend {
+	margin: 0 auto;
+	font-size: 130%;
+	position: fixed;
+	right: 2%;
+	top: 52%;
+	width: 10%;
+	text-align: center;
+	word-wrap: break-word;
+	line-height: normal;
+	font-family: 'customfont';
+}
+.left_chevron:hover {
+	background: linear-gradient(to right, gray , white);
+	opacity: 0.40;
+}
+.right_chevron:hover  {
+	background: linear-gradient(to left, gray , white);
+	opacity: 0.40;
+}
+</style>
+</head>
+<nav class="menu-navbar" id="myNavbar">
+  <a class="menu-item" href="#overview_section">Overview</a>
+  <a class="menu-item" href="#gameplay_section">Gameplay Video</a>
+  <a class="menu-item" href="#detailed_section">Detailed Info</a>
+  <a href="javascript:void(0);" class="icon" onclick="functionMenus()"><span class="fa fa-bars fa-2x" aria-hidden="true"></span></a>
+  <nav class="nav-icon">
+    <a href="https://github.com/Graygzou/Metenorage"><i class="fab fa-github fa-2x"></i></a>
+  </nav>
+</nav>
+<div id="myDropdown" class="dropdown-content">
+    <a class="menu-item" href="#overview_section">Overview</a>
+    <a class="menu-item" href="#gameplay_section">Gameplay Video</a>
+    <a class="menu-item" href="#detailed_section">Detailed Info</a>
+</div>
+<header>
+</header>
+<body>
+
+</body>
+<footer>
+  <i class="far fa-copyright"></i> Gregoire Boiron. All rights reserved.
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+<script src="js/custom.js" defer></script>
+
+
+
